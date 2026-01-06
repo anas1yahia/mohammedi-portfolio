@@ -68,7 +68,9 @@
   position: relative;
   z-index: 1;
   display: flex;
-  background: #fff;
+  background-color: color-mix(in srgb, var(--accent-color), #fff 94%);
+  background-image: radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.03) 1px, transparent 0);
+  background-size: 16px 16px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.1);
@@ -87,6 +89,7 @@
 .services-section .services-list .service-item .service-ticket .ticket-stub .service-icon {
   width: 40px;
   height: 40px;
+  filter: drop-shadow(0 0 8px rgba(var(--accent-color), 0.4));
 }
 .services-section .services-list .service-item .service-ticket .ticket-stub .circle-cutout {
   position: absolute;
@@ -110,6 +113,23 @@
   justify-content: center;
   border-inline-start: 2px dashed rgba(0, 0, 0, 0.1);
   text-align: start;
+  position: relative;
+}
+.services-section .services-list .service-item .service-ticket .ticket-content .watermark-icon {
+  position: absolute;
+  inset-inline-end: -20px;
+  bottom: -20px;
+  width: 180px;
+  height: 180px;
+  color: var(--accent-color);
+  opacity: 0.06;
+  transform: rotate(-15deg);
+  pointer-events: none;
+  z-index: 0;
+}
+.services-section .services-list .service-item .service-ticket .ticket-content .service-label, .services-section .services-list .service-item .service-ticket .ticket-content .service-desc {
+  position: relative;
+  z-index: 1;
 }
 .services-section .services-list .service-item .service-ticket .ticket-content .service-label {
   font-size: 28px;
@@ -119,10 +139,10 @@
 }
 .services-section .services-list .service-item .service-ticket .ticket-content .service-desc {
   font-size: 16px;
-  color: #444;
+  color: #333;
   margin: 0;
   line-height: 1.6;
-  font-weight: 500;
+  font-weight: 600;
 }
 .services-section .services-list .service-item .service-ticket .ticket-content .decor-line {
   position: absolute;

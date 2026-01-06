@@ -28,6 +28,11 @@
 
             <!-- Content Area -->
             <div class="ticket-content">
+              <div class="watermark-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path [attr.d]="service.icon"></path>
+                </svg>
+              </div>
               <h3 class="service-label">{{ service.label }}</h3>
               <p class="service-desc">{{ service.desc }}</p>
               <div class="decor-line"></div>
