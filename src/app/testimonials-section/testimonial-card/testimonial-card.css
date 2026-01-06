@@ -1,0 +1,97 @@
+:host {
+  display: block;
+  height: 100%;
+  font-family: "Noto Sans Arabic", sans-serif;
+}
+
+.card-container {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  direction: rtl;
+}
+.card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+.card-container.primary-card {
+  border-bottom: 4px solid #4fabe9;
+}
+.card-container.primary-card .quote-mark svg {
+  fill: #4fabe9;
+  opacity: 0.2;
+}
+.card-container .quote-mark {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.card-container .quote-mark svg {
+  fill: #e0e0e0;
+  width: 32px;
+  height: 32px;
+  transition: fill 0.3s;
+}
+.card-container .content-wrapper {
+  flex: 1;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+.card-container .content-wrapper .testimonial-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin: 0;
+  white-space: pre-wrap;
+  font-weight: 500;
+}
+.card-container .author-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 20px;
+  margin-top: auto;
+}
+.card-container .author-section .image-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.card-container .author-section .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-container .author-section .text-info {
+  display: flex;
+  flex-direction: column;
+}
+.card-container .author-section .text-info .name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.4;
+}
+.card-container .author-section .text-info .role {
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=testimonial-card.css.map */

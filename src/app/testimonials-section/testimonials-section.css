@@ -1,5 +1,53 @@
 :host {
   display: block;
+  padding: 80px 0;
+  font-family: "Noto Sans Arabic", sans-serif;
+  background-color: #f6f4ee;
+}
+
+.testimonials-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.testimonials-section .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.testimonials-section .section-header .title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.8;
+  margin: 0;
+}
+.testimonials-section .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.testimonials-section .cards-grid .grid-item {
+  width: 100%;
+}
+.testimonials-section .cards-grid .grid-item.tall-item {
+  grid-row: span 2;
+}
+@media (max-width: 1024px) {
+  .testimonials-section .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonials-section .cards-grid .grid-item.tall-item {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 768px) {
+  .testimonials-section .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-section .cards-grid .grid-item.tall-item {
+    grid-column: span 1;
+  }
 }
 
 /*# sourceMappingURL=testimonials-section.css.map */

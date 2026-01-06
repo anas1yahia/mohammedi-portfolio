@@ -1,0 +1,165 @@
+:host {
+  display: block;
+  padding: 80px 0;
+  font-family: "Noto Sans Arabic", sans-serif;
+}
+
+.work-steps-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.work-steps-section .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.work-steps-section .section-header .title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+.work-steps-section .steps-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+.work-steps-section .steps-grid .ticket-card {
+  position: relative;
+  display: flex;
+  width: 320px;
+  height: 180px;
+  background-color: var(--card-color, #a3f05d);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+.work-steps-section .steps-grid .ticket-card:hover {
+  transform: translateY(-5px);
+}
+.work-steps-section .steps-grid .ticket-card .ticket-stub {
+  width: 60px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+.work-steps-section .steps-grid .ticket-card .ticket-stub .step-icon {
+  color: white;
+}
+.work-steps-section .steps-grid .ticket-card .ticket-stub .circle-cutout {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  left: -10px;
+}
+.work-steps-section .steps-grid .ticket-card .ticket-stub .circle-cutout.top {
+  top: -10px;
+}
+.work-steps-section .steps-grid .ticket-card .ticket-stub .circle-cutout.bottom {
+  bottom: -10px;
+}
+.work-steps-section .steps-grid .ticket-card .ticket-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border-right: 2px dashed rgba(0, 0, 0, 0.1);
+}
+.work-steps-section .steps-grid .ticket-card .ticket-content .step-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  opacity: 0.6;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.work-steps-section .steps-grid .ticket-card .ticket-content .content-body {
+  text-align: right;
+}
+.work-steps-section .steps-grid .ticket-card .ticket-content .content-body .step-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 5px 0;
+}
+.work-steps-section .steps-grid .ticket-card .ticket-content .content-body .step-desc {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+.work-steps-section .cta-container {
+  display: flex;
+  justify-content: center;
+}
+.work-steps-section .cta-container .cta-box {
+  border: 1px dashed #4fabe9;
+  padding: 30px 50px;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+}
+.work-steps-section .cta-container .cta-box::before, .work-steps-section .cta-container .cta-box::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #4fabe9;
+  border-radius: 50%;
+}
+.work-steps-section .cta-container .cta-box::before {
+  top: -4px;
+  left: -4px;
+}
+.work-steps-section .cta-container .cta-box::after {
+  bottom: -4px;
+  right: -4px;
+}
+.work-steps-section .cta-container .cta-box .cta-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #000;
+}
+.work-steps-section .cta-container .cta-box .action-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.work-steps-section .cta-container .cta-box .action-buttons .action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  background-color: #4fabe9;
+  color: white;
+}
+.work-steps-section .cta-container .cta-box .action-buttons .action-btn:hover {
+  background-color: #3e9ac9;
+}
+@media (max-width: 992px) {
+  .work-steps-section .steps-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=work-steps.css.map */

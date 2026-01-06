@@ -10,10 +10,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navbar.scss'
 })
 export class NavbarComponent {
+  isMenuOpen = signal(false);
+
   navItems = signal([
     { label: 'بم أساعدك', path: '/help', styles: { 'font-size': '14px', 'color': '#717070' } },
     { label: 'الاسعار', path: '/pricing', styles: { 'font-size': '13px', 'color': '#646362' } },
     { label: 'اعمالي', path: '/portfolio', styles: { 'font-size': '13px', 'color': '#777676' } },
     { label: 'خدماتي', path: '/services', styles: { 'font-size': '13px', 'color': '#6f6f6e' } }
   ]);
+
+  toggleMenu() {
+    this.isMenuOpen.update(val => !val);
+  }
 }

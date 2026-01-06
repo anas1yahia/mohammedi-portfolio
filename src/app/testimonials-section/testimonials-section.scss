@@ -1,3 +1,67 @@
 :host {
   display: block;
+  padding: 80px 0;
+  font-family: 'Noto Sans Arabic', sans-serif;
+  background-color: #f6f4ee; // Match body bg
+}
+
+.testimonials-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+
+    .title {
+      font-size: 36px;
+      font-weight: 400; // Regular
+      color: #000;
+      opacity: 0.8;
+      margin: 0;
+    }
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start; // Align top
+
+    .grid-item {
+      width: 100%;
+      
+      // Default height for short cards?
+      // Actually let the content dictate height, but try to match design heights visually.
+      // Design: Primary ~536px, Others ~358px.
+      
+      &.tall-item {
+        grid-row: span 2; // If using masonry, but simple grid row span might not work if other cols have 1 item.
+        // Since we have 3 columns and 1 row effectively (visual), "span 2" vertical doesn't apply to columns.
+        // It's just a taller column.
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+      
+      // Make the first item span full width or just flow?
+      .grid-item.tall-item {
+        grid-column: span 2; 
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+      
+      .grid-item.tall-item {
+        grid-column: span 1;
+      }
+    }
+  }
 }

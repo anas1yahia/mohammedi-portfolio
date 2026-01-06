@@ -1,3 +1,21 @@
-<section class="testimonials-section">
-  <p>Testimonials works!</p>
+<section class="testimonials-section" dir="rtl">
+  <!-- Title -->
+  <div class="section-header">
+    <h2 class="title">كلمات من أصدقائي</h2>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="cards-grid">
+    @for (testimonial of testimonials; track testimonial.authorName) {
+      <div class="grid-item" [class.tall-item]="testimonial.isPrimary">
+        <app-testimonial-card
+          [content]="testimonial.content"
+          [authorName]="testimonial.authorName"
+          [authorRole]="testimonial.authorRole"
+          [authorImage]="testimonial.authorImage"
+          [isPrimary]="testimonial.isPrimary"
+        ></app-testimonial-card>
+      </div>
+    }
+  </div>
 </section>

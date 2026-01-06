@@ -8,7 +8,7 @@
     </div>
 
     <!-- Navigation Menu (Center) -->
-    <ul class="nav-menu">
+    <ul class="nav-menu desktop-menu">
       <!-- Welcome Item (Always styled as pill) -->
       <li class="nav-item">
         <a routerLink="/welcome" class="nav-link welcome-pill">
@@ -25,15 +25,56 @@
       }
     </ul>
 
-    <!-- CTA Button (Left) -->
-    <a routerLink="/start-project" class="cta-button">
-      <!-- Decor Left (Visual Left, Physical Left) -->
-      <div class="deco-icon deco-left"></div>
-      
-      <span class="cta-text">قدم مشروعك</span>
-      
-      <!-- Decor Right (Visual Right, Physical Right of the container?) -->
-      <div class="deco-icon deco-right"></div>
-    </a>
+    <!-- Left Actions (CTA + Burger) -->
+    <div class="left-actions">
+      <!-- CTA Button (Left) -->
+      <a routerLink="/start-project" class="cta-button">
+        <!-- Decor Left (Visual Left, Physical Left) -->
+        <div class="deco-icon deco-left"></div>
+        
+        <span class="cta-text">قدم مشروعك</span>
+        
+        <!-- Decor Right (Visual Right, Physical Right of the container?) -->
+        <div class="deco-icon deco-right"></div>
+      </a>
+
+      <!-- Burger Menu -->
+      <button class="burger-menu" (click)="toggleMenu()" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Bottom Sheet Overlay -->
+  <div class="bottom-sheet-overlay" [class.open]="isMenuOpen()" (click)="toggleMenu()"></div>
+
+  <!-- Bottom Sheet -->
+  <div class="bottom-sheet" [class.open]="isMenuOpen()">
+    <!-- Floating Close Button -->
+    <div class="close-btn-floating" (click)="toggleMenu()">
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         <line x1="18" y1="6" x2="6" y2="18"></line>
+         <line x1="6" y1="6" x2="18" y2="18"></line>
+       </svg>
+    </div>
+
+    <ul class="mobile-nav-menu">
+      <li class="nav-item">
+        <a routerLink="/welcome" class="nav-link welcome-pill" (click)="toggleMenu()">
+          مرحبا
+        </a>
+      </li>
+      @for (item of navItems(); track item.label) {
+        <li class="nav-item">
+          <a [routerLink]="item.path" routerLinkActive="active" class="nav-link" (click)="toggleMenu()">
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
   </div>
 </nav>

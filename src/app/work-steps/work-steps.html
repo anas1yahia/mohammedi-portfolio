@@ -1,0 +1,70 @@
+<section class="work-steps-section" dir="rtl">
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="section-header">
+      <h2 class="title">خطوات العمل معي</h2>
+    </div>
+
+    <!-- Steps Grid (Tickets) -->
+    <div class="steps-grid">
+      @for (step of steps; track step.stepNumber) {
+        <div class="ticket-card" [style.--card-color]="step.color">
+          <!-- Left Stub (Black with Icon) -->
+          <div class="ticket-stub">
+            <div class="circle-cutout top"></div>
+            <div class="step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path [attr.d]="step.iconPath"></path>
+              </svg>
+            </div>
+            <div class="circle-cutout bottom"></div>
+          </div>
+
+          <!-- Main Content Area -->
+          <div class="ticket-content">
+            <div class="step-number">
+              <span>{{ step.stepNumber }}</span>
+            </div>
+            
+            <div class="content-body">
+              <h3 class="step-title">{{ step.title }}</h3>
+              <p class="step-desc">{{ step.description }}</p>
+            </div>
+
+            <!-- Decorative Lines/Barcode look -->
+            <div class="ticket-decor"></div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- CTA Actions -->
+    <div class="cta-container">
+      <div class="cta-box">
+        <h3 class="cta-title">جاهز للبدء؟</h3>
+        <div class="action-buttons">
+          
+          <!-- Email Button -->
+          <a href="mailto:contact@example.com" class="action-btn email-btn">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <span class="text">contact@example.com</span>
+          </a>
+
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/1234567890" class="action-btn whatsapp-btn" target="_blank">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16.95 14.4c.79-1.23.9-2.75.29-4.13C16.3 8.32 14.78 7.37 13.1 7.8c-1.32.34-2.28 1.4-2.55 2.74-.23 1.14.33 2.33 1.25 3.09 1.45 1.19 3.52 1.15 4.91-.07.47-.41.83-.93 1.05-1.5.09-.23.12-.48.09-.72"/></svg> <!-- Placeholder for WA icon complexity -->
+              <!-- Better WA path usually needed but this is standard lucide circle for now -->
+            </span>
+            <span class="text">تواصل واتساب</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

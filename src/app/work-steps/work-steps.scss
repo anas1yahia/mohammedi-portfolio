@@ -1,0 +1,184 @@
+:host {
+  display: block;
+  padding: 80px 0;
+  font-family: 'Noto Sans Arabic', sans-serif;
+
+}
+
+.work-steps-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+      color: #000;
+      margin: 0;
+    }
+  }
+
+  .steps-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+
+    .ticket-card {
+      position: relative;
+      display: flex;
+      width: 320px;
+      height: 180px;
+      background-color: var(--card-color, #a3f05d);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .ticket-stub {
+        width: 60px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-shrink: 0;
+
+        // Perforated edge effect between stub and content
+        // This can be tricky. Using a border-right dashed on stub?
+        // Or masking. Let's keep it simple: straight edge.
+
+        .step-icon {
+          color: white;
+        }
+
+        .circle-cutout {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: #ffffff; // Match section bg
+          border-radius: 50%;
+          left: -10px; // Half visible on left edge
+
+          &.top { top: -10px; }
+          &.bottom { bottom: -10px; }
+        }
+      }
+
+      .ticket-content {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        // Dotted line separator
+        border-right: 2px dashed rgba(0,0,0,0.1);
+
+        .step-number {
+          font-size: 14px;
+          font-weight: 700;
+          color: #000;
+          opacity: 0.6;
+          margin-bottom: 10px;
+          text-align: left; // LTR number?
+        }
+
+        .content-body {
+          text-align: right;
+
+          .step-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin: 0 0 5px 0;
+          }
+
+          .step-desc {
+            font-size: 13px;
+            font-weight: 500;
+            color: #333;
+            margin: 0;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+
+  .cta-container {
+    display: flex;
+    justify-content: center;
+
+    .cta-box {
+      border: 1px dashed #4fabe9;
+      padding: 30px 50px;
+      border-radius: 4px; // Slight rounded
+      text-align: center;
+      position: relative;
+
+      // Corner dots
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: #4fabe9;
+        border-radius: 50%;
+      }
+      &::before { top: -4px; left: -4px; }
+      &::after { bottom: -4px; right: -4px; }
+      // Add more dots if needed via extra elements or box-shadows
+
+      .cta-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        color: #000;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .action-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 12px 24px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 14px;
+          transition: all 0.2s;
+          background-color: #4fabe9;
+          color: white;
+
+          &:hover {
+            background-color: #3e9ac9; // Slightly darker blue
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .steps-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

@@ -145,26 +145,67 @@
   border-radius: 50%;
 }
 @media (max-width: 1024px) {
+  .projects-section {
+    padding: 60px 0;
+  }
   .projects-section .container {
     flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
   .projects-section .header-column {
     position: static;
     width: 100%;
+    flex: 0 0 auto;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
   .projects-section .header-column .main-title {
     text-align: center;
+    font-size: 50px;
+  }
+  .projects-section .header-column .main-title .square-dot {
+    margin-right: 10px;
+    margin-left: 10px;
   }
   .projects-section .projects-list {
     width: 100%;
     align-items: center;
-    gap: 80px;
+    gap: 100px;
+    padding-top: 30px;
   }
   .projects-section .projects-list .project-item {
     align-self: center !important;
-    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px;
+  }
+  .projects-section .projects-list .project-item.item-01, .projects-section .projects-list .project-item.item-02, .projects-section .projects-list .project-item.item-03 {
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 40px 0;
+  }
+  .projects-section .projects-section {
+    padding: 0 20px;
+  }
+  .projects-section .header-column .main-title {
+    font-size: 36px;
+  }
+  .projects-section .projects-list {
+    gap: 80px;
+  }
+  .projects-section .projects-list .project-item {
+    max-width: 100%;
+  }
+  .projects-section .projects-list .project-item .number {
+    font-size: 60px;
+    top: -50px;
+    right: 0;
+  }
+  .projects-section .projects-list .project-item .project-card .info-area .text-details .card-title {
+    font-size: 16px;
   }
 }
 
