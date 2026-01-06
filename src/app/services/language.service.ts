@@ -67,7 +67,10 @@ export class LanguageService {
       },
       projects: {
         title: 'أعمالي ومشاركاتي',
-        cat: 'تصميم غلاف'
+        cat: 'تصميم غلاف',
+        placeholderTitle: 'تفاصيل المشروع',
+        placeholderDesc: 'هذا نص تجريبي لوصف المشروع المختار. هنا سيتم عرض شرح مفصل عن خطوات العمل، الأهداف المحققة، والأدوات المستخدمة في تنفيذ هذا التصميم الإبداعي.',
+        close: 'إغلاق'
       },
       services: {
         title: 'خدماتي الإبداعية',
@@ -132,7 +135,10 @@ export class LanguageService {
       },
       projects: {
         title: 'My Works & Participations',
-        cat: 'Cover Design'
+        cat: 'Cover Design',
+        placeholderTitle: 'Project Details',
+        placeholderDesc: 'This is a placeholder description for the selected project. Here you will see a detailed explanation of the workflow, achieved goals, and tools used in executing this creative design.',
+        close: 'Close'
       },
       services: {
         title: 'My Creative Services',

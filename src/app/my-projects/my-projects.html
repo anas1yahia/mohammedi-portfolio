@@ -12,7 +12,7 @@
     <div class="projects-list">
 
       <!-- Project 01 -->
-      <div class="project-item item-01">
+      <div class="project-item item-01" (click)="openDetails({title: 'مشاعر ممنوعة', year: '2024'})">
         <span class="number">01</span>
 
         <div class="project-card">
@@ -43,7 +43,7 @@
       </div>
 
       <!-- Project 02 -->
-      <div class="project-item item-02">
+      <div class="project-item item-02" (click)="openDetails({title: 'على فوهة الدوامة', year: '2024'})">
         <span class="number">02</span>
 
         <div class="project-card">
@@ -68,7 +68,7 @@
       </div>
 
       <!-- Project 03 -->
-      <div class="project-item item-03">
+      <div class="project-item item-03" (click)="openDetails({title: 'السبيل الى الدمار', year: '2024'})">
         <span class="number">03</span>
 
         <div class="project-card">
@@ -94,5 +94,34 @@
 
     </div>
 
+  </div>
+
+  <!-- Project Details Bottom Sheet Overlay -->
+  <div class="details-overlay" [class.open]="isDetailsOpen()" (click)="closeDetails()"></div>
+
+  <!-- Project Details Bottom Sheet -->
+  <div class="details-sheet" [class.open]="isDetailsOpen()">
+    <div class="sheet-header">
+      <h3 class="sheet-title">{{ langService.translate('projects.placeholderTitle') }}</h3>
+      <button class="close-btn" (click)="closeDetails()">
+        {{ langService.translate('projects.close') }}
+      </button>
+    </div>
+    
+    <div class="sheet-content">
+      <div class="project-info-summary">
+        <h4 class="selected-project-title">{{ selectedProject()?.title }}</h4>
+        <span class="selected-project-year">{{ selectedProject()?.year }}</span>
+      </div>
+      
+      <p class="project-description">
+        {{ langService.translate('projects.placeholderDesc') }}
+      </p>
+
+      <div class="placeholder-images">
+        <div class="img-box"></div>
+        <div class="img-box"></div>
+      </div>
+    </div>
   </div>
 </section>
