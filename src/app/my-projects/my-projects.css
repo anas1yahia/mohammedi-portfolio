@@ -14,7 +14,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
-  font-family: "Noto Sans Arabic", sans-serif;
+  font-family: "Playpen Sans Arabic", sans-serif;
 }
 .projects-section .container {
   display: flex;
@@ -65,7 +65,7 @@
   margin-top: 50px;
 }
 .projects-section .projects-list .project-item .number {
-  font-family: "Inter", sans-serif;
+  font-family: "Playpen Sans Arabic", sans-serif;
   font-size: 100px;
   font-weight: 900;
   color: var(--text-main);

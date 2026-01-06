@@ -66,7 +66,7 @@ export class LanguageService {
         description: 'محمد الأمين محمدي مصمم جرافيكي وصانع محتوى رقمي 5 سنوات خبرة مختص في جعل مشاريعك عالقة في أذهان زبائنك ومنافسيك'
       },
       projects: {
-        title: 'تصاميم أغلفة الكتب والمجلات',
+        title: 'أعمالي ومشاركاتي',
         cat: 'تصميم غلاف'
       },
       services: {
@@ -131,7 +131,7 @@ export class LanguageService {
         description: 'Mohamed El Amine Mohammedi, graphic designer and digital content creator with 5 years of experience, specialized in making your projects stick in the minds of your customers and competitors.'
       },
       projects: {
-        title: 'Book and Magazine Cover Designs',
+        title: 'My Works & Participations',
         cat: 'Cover Design'
       },
       services: {
