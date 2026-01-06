@@ -101,6 +101,10 @@ export class LanguageService {
       },
       testimonials: {
         title: 'كلمات من أصدقائي'
+      },
+      footer: {
+        copyright: '© 2026 جميع الحقوق محفوظة لمحمد الأمين محمدي',
+        credit: 'صمم بابتسامة - يحيى أنس مهندس تجربة المستخدم'
       }
     },
     en: {
@@ -162,6 +166,10 @@ export class LanguageService {
       },
       testimonials: {
         title: 'Words from my friends'
+      },
+      footer: {
+        copyright: '© 2026 All rights reserved to Mohamed El Amine Mohammedi',
+        credit: 'Designed with smile - Yahia Anas UX Engineer'
       }
     }
   };
