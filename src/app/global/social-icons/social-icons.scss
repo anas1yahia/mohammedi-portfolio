@@ -11,10 +11,15 @@
   gap: 32px;
   padding: 14px 38px;
   background-color: var(--bg-color); 
-  border-top: 1px solid var(--border-color);
-  border-inline-end: 1px solid var(--border-color);
+  border-top: 1px solid #99a1af;
+  border-inline-end: 1px solid #99a1af;
   border-top-right-radius: 24px;
   border-top-left-radius: 0; // Standardize for LTR
+  
+  :host-context([data-theme='dark']) & {
+    border-top-color: var(--border-color);
+    border-inline-end-color: var(--border-color);
+  }
   
   // RTL handling
   :host-context([dir="rtl"]) & {

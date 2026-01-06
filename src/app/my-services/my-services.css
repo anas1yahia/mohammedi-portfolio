@@ -69,7 +69,12 @@
   position: relative;
   z-index: 1;
   display: flex;
+  background-color: color-mix(in srgb, var(--accent-color), #fff 85%);
+}
+:host-context([data-theme=dark]) .services-section .services-list .service-item .service-ticket {
   background-color: var(--card-bg);
+}
+.services-section .services-list .service-item .service-ticket {
   background-image: radial-gradient(circle at 2px 2px, var(--border-color) 1px, transparent 0);
   background-size: 16px 16px;
   border-radius: 16px;

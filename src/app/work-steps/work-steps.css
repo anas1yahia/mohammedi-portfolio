@@ -74,7 +74,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  background-color: var(--card-bg);
   border-inline-start: 2px dashed var(--border-color);
 }
 .work-steps-section .steps-grid .ticket-card .ticket-content .step-number {

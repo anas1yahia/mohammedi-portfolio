@@ -11,10 +11,14 @@
   gap: 32px;
   padding: 14px 38px;
   background-color: var(--bg-color);
-  border-top: 1px solid var(--border-color);
-  border-inline-end: 1px solid var(--border-color);
+  border-top: 1px solid #99a1af;
+  border-inline-end: 1px solid #99a1af;
   border-top-right-radius: 24px;
   border-top-left-radius: 0;
+}
+:host-context([data-theme=dark]) .social-bar {
+  border-top-color: var(--border-color);
+  border-inline-end-color: var(--border-color);
 }
 :host-context([dir=rtl]) .social-bar {
   border-top-left-radius: 24px;
