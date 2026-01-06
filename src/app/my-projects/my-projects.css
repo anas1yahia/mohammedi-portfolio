@@ -2,10 +2,12 @@
   display: block;
   width: 100%;
   padding: 100px 0;
-  background-color: #f6f4ee;
-  background-color: transparent;
+  background-color: var(--bg-color);
   background-image: linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
   background-size: 60px 60px;
+}
+:host-context([data-theme=dark]) :host {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
 .projects-section {
@@ -28,7 +30,7 @@
 .projects-section .header-column .main-title {
   font-size: 70px;
   font-weight: 900;
-  color: #000;
+  color: var(--text-main);
   line-height: 1.1;
   text-align: start;
 }
@@ -36,7 +38,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-color: #000;
+  background-color: var(--text-main);
   margin-inline-start: 15px;
 }
 .projects-section .projects-list {
@@ -66,7 +68,8 @@
   font-family: "Inter", sans-serif;
   font-size: 100px;
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.15);
+  color: var(--text-main);
+  opacity: 0.15;
   position: absolute;
   top: -80px;
   inset-inline-end: -20px;
@@ -76,9 +79,10 @@
 .projects-section .projects-list .project-item .project-card {
   position: relative;
   z-index: 1;
-  background-color: #e8e4e2;
+  background-color: var(--card-bg);
   border-radius: 8px;
   padding: 12px;
+  box-shadow: 0 10px 30px var(--shadow-color);
 }
 .projects-section .projects-list .project-item .project-card .image-area {
   width: 100%;
@@ -106,19 +110,19 @@
 .projects-section .projects-list .project-item .project-card .info-area .arrow-circle {
   width: 28px;
   height: 28px;
-  border: 1px solid rgba(17, 24, 39, 0.3);
+  border: 1px solid var(--border-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
+  color: var(--text-main);
   cursor: pointer;
   transition: background 0.2s;
 }
 .projects-section .projects-list .project-item .project-card .info-area .arrow-circle:hover {
-  background: #000;
+  background: #4fabe9;
   color: #fff;
-  border-color: #000;
+  border-color: #4fabe9;
 }
 .projects-section .projects-list .project-item .project-card .info-area .text-details {
   text-align: start;
@@ -126,7 +130,7 @@
 .projects-section .projects-list .project-item .project-card .info-area .text-details .card-title {
   font-size: 18px;
   font-weight: 700;
-  color: #000;
+  color: var(--text-main);
   margin: 0 0 5px 0;
 }
 .projects-section .projects-list .project-item .project-card .info-area .text-details .meta {
@@ -135,12 +139,12 @@
   justify-content: flex-start;
   gap: 5px;
   font-size: 12px;
-  color: #666;
+  color: var(--text-muted);
 }
 .projects-section .projects-list .project-item .project-card .info-area .text-details .meta .dot {
   width: 4px;
   height: 4px;
-  background-color: #666;
+  background-color: var(--text-muted);
   border-radius: 50%;
 }
 @media (max-width: 1024px) {

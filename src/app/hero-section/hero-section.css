@@ -2,7 +2,7 @@
   display: block;
   padding: 50px 0;
   font-family: "Noto Sans Arabic", sans-serif;
-  background-color: #f6f4ee;
+  background-color: var(--bg-color);
 }
 
 .hero-section {
@@ -37,14 +37,14 @@
 .hero-section .welcome-col .welcome-header .text-content .welcome-title {
   font-size: 41px;
   font-weight: 600;
-  color: #262526;
+  color: var(--text-main);
   margin: 0;
   line-height: 1.2;
 }
 .hero-section .welcome-col .welcome-header .text-content .welcome-subtitle {
   font-size: 41px;
   font-weight: 600;
-  color: #262526;
+  color: var(--text-main);
   margin: 0;
   line-height: 1.2;
 }
@@ -148,12 +148,12 @@
   display: block;
   font-size: 38px;
   font-weight: 700;
-  color: #242324;
+  color: var(--text-main);
 }
 .hero-section .welcome-col .contact-stats-wrapper .stats-row .stat-item .stat-label {
   display: block;
   font-size: 11px;
-  color: #8a8a8a;
+  color: var(--text-muted);
   font-weight: 700;
 }
 .hero-section .welcome-col .services-grid {
@@ -213,6 +213,10 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: filter 0.3s ease;
+}
+:host-context([data-theme=dark]) .hero-section .image-col .sub-img-wrapper img {
+  filter: invert(1) brightness(2);
 }
 .hero-section {
   /* --- 3. Profile Column --- */
@@ -237,6 +241,9 @@
 }
 .hero-section .profile-col .profile-details .deco-icons-container .deco {
   position: absolute;
+}
+:host-context([data-theme=dark]) .hero-section .profile-col .profile-details .deco-icons-container .deco {
+  filter: invert(1) brightness(2);
 }
 .hero-section .profile-col .profile-details .deco-icons-container .d1 {
   left: 0;
@@ -271,7 +278,7 @@
 .hero-section .profile-col .profile-details .profile-desc {
   text-align: right;
   font-size: 19px;
-  color: #484848;
+  color: var(--text-color);
   line-height: 1.5;
 }
 .hero-section .profile-col .profile-details .profile-desc p {
@@ -291,6 +298,10 @@
   padding: 30px;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px var(--shadow-color);
 }
 .hero-section .profile-col .tools-container .pencil {
   display: flex;

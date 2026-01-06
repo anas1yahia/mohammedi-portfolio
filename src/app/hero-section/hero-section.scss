@@ -2,7 +2,7 @@
   display: block;
   padding: 50px 0;
   font-family: 'Noto Sans Arabic', sans-serif;
-  background-color: #f6f4ee;
+  background-color: var(--bg-color);
 }
 
 .hero-section {
@@ -36,14 +36,14 @@
         .welcome-title {
           font-size: 41px;
           font-weight: 600;
-          color: #262526;
+          color: var(--text-main);
           margin: 0;
           line-height: 1.2;
         }
         .welcome-subtitle {
           font-size: 41px;
           font-weight: 600;
-          color: #262526;
+          color: var(--text-main);
           margin: 0;
           line-height: 1.2;
         }
@@ -81,7 +81,7 @@
         .action-row {
           display: flex;
           align-items: flex-start;
-          flex-direction: row; 
+          flex-direction: row;
 
           .main-btn {
             height: 62px;
@@ -156,12 +156,12 @@
             display: block;
             font-size: 38px;
             font-weight: 700;
-            color: #242324;
+            color: var(--text-main);
           }
           .stat-label {
             display: block;
             font-size: 11px;
-            color: #8a8a8a;
+            color: var(--text-muted);
             font-weight: 700;
           }
         }
@@ -212,7 +212,13 @@
     .sub-img-wrapper {
       width: 95px;
       height: 53px;
-      img { width: 100%; height: 100%; object-fit: contain; }
+      img {
+        width: 100%; height: 100%; object-fit: contain;
+        transition: filter 0.3s ease;
+        :host-context([data-theme='dark']) & {
+          filter: invert(1) brightness(2);
+        }
+      }
     }
   }
 
@@ -235,7 +241,12 @@
         direction: ltr;
         margin-right: 23px;
 
-        .deco { position: absolute; }
+        .deco {
+          position: absolute;
+          :host-context([data-theme='dark']) & {
+            filter: invert(1) brightness(2);
+          }
+        }
         .d1 { left: 0; top: 114px; width: 28px; height: 27px; }
         .d2 { left: 287px; top: 25px; width: 24px; height: 24px; }
         .d3 { left: 52px; top: 37px; width: 23px; height: 24px; }
@@ -246,7 +257,7 @@
       .profile-desc {
         text-align: right;
         font-size: 19px;
-        color: #484848;
+        color: var(--text-color);
         line-height: 1.5;
         p { margin: 0; }
         .highlight { color: #4fabe9; font-weight: 700; }
@@ -263,6 +274,10 @@
       padding: 30px;
       justify-content: center;
       align-items: center;
+      background-color: transparent;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px var(--shadow-color);
 
       .pencil {
         display: flex;
@@ -312,7 +327,7 @@
             rgba(0,0,0,0.1) 60%,
             rgba(0,0,0,0.2) 100%
           );
-          
+
           .tool-text {
             font-family: 'Inter', sans-serif;
             font-size: 14px;
@@ -383,24 +398,24 @@
     gap: 50px;
     padding: 30px 20px;
 
-    .column { 
-      width: 100% !important; 
-      align-items: center !important; 
+    .column {
+      width: 100% !important;
+      align-items: center !important;
     }
 
     .welcome-col {
       gap: 40px;
-      
+
       .welcome-header {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        .text-content { 
-          text-align: center; 
+        .text-content {
+          text-align: center;
           margin-bottom: 30px;
         }
-        
+
         .role-badge {
           position: relative;
           top: auto;
@@ -410,7 +425,7 @@
 
       .contact-stats-wrapper {
         align-items: center;
-        
+
         .contact-actions {
           align-items: center;
         }
@@ -429,14 +444,14 @@
     .profile-col {
       .profile-details {
         align-items: center;
-        
+
         .deco-icons-container {
           margin-right: 0;
           margin-bottom: 20px;
         }
-        
-        .profile-desc { 
-          text-align: center; 
+
+        .profile-desc {
+          text-align: center;
         }
       }
     }
@@ -455,7 +470,7 @@
       .contact-stats-wrapper {
         .contact-actions {
           width: 100%;
-          
+
           .action-row {
             flex-direction: column;
             width: 100%;
@@ -464,12 +479,12 @@
 
             &.need-design, &.contact-me {
               justify-content: center;
-              
+
               .main-btn {
                 width: 100%;
                 border-radius: 12px;
               }
-              
+
               .icon-part {
                 display: none;
               }
@@ -494,7 +509,7 @@
 
     .image-col {
       gap: 30px;
-      
+
       .main-img-wrapper {
         height: auto;
         max-height: 300px;
@@ -506,7 +521,7 @@
         width: 100%;
         max-width: 350px;
       }
-      
+
       .profile-details {
         .deco-icons-container {
             display: none; // Hide decorative icons on mobile to save space

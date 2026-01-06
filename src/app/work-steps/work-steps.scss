@@ -2,7 +2,7 @@
   display: block;
   padding: 80px 0;
   font-family: 'Noto Sans Arabic', sans-serif;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
 }
 
 .work-steps-section {
@@ -17,7 +17,7 @@
     .title {
       font-size: 48px;
       font-weight: 700;
-      color: #000;
+      color: var(--text-main);
       margin: 0;
     }
   }
@@ -37,78 +37,80 @@
       background-color: var(--card-color, #a3f05d);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 6px var(--shadow-color);
       transition: transform 0.2s;
-
+      
       &:hover {
         transform: translateY(-5px);
       }
 
       .ticket-stub {
-              width: 60px;
-              background-color: #000;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-              flex-shrink: 0;
-              
-              .step-icon {
-                color: white;
-              }
-      
-              .circle-cutout {
-                position: absolute;
-                width: 20px;
-                height: 20px;
-                background-color: #ffffff; // Match section bg
-                border-radius: 50%;
-                inset-inline-start: -10px; // Half visible on edge
-                
-                &.top { top: -10px; }
-                &.bottom { bottom: -10px; }
-              }
-            }
-      
-            .ticket-content {
-              flex: 1;
-              padding: 20px;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              position: relative;
-              
-              // Dotted line separator
-              border-inline-start: 2px dashed rgba(0,0,0,0.1);
-      
-              .step-number {
-                font-size: 14px;
-                font-weight: 700;
-                color: #000;
-                opacity: 0.6;
-                margin-bottom: 10px;
-                text-align: start; 
-              }
-      
-              .content-body {
-                text-align: start;
-                
-                .step-title {
-                  font-size: 20px;
-                  font-weight: 700;
-                  color: #000;
-                  margin: 0 0 5px 0;
-                }
-                
-                .step-desc {
-                  font-size: 13px;
-                  font-weight: 500;
-                  color: #333;
-                  margin: 0;
-                  line-height: 1.4;
-                }
-              }
-            }    }
+        width: 60px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-shrink: 0;
+        
+        .step-icon {
+          color: white;
+        }
+
+        .circle-cutout {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: var(--bg-color); // Match section bg
+          border-radius: 50%;
+          inset-inline-start: -10px; // Half visible on edge
+          
+          &.top { top: -10px; }
+          &.bottom { bottom: -10px; }
+        }
+      }
+
+      .ticket-content {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background-color: var(--card-bg);
+        
+        // Dotted line separator
+        border-inline-start: 2px dashed var(--border-color);
+
+        .step-number {
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--text-main);
+          opacity: 0.6;
+          margin-bottom: 10px;
+          text-align: start; 
+        }
+
+        .content-body {
+          text-align: start;
+          
+          .step-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 5px 0;
+          }
+          
+          .step-desc {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
   }
 
   .cta-container {
@@ -121,6 +123,7 @@
       border-radius: 4px; // Slight rounded
       text-align: center;
       position: relative;
+      background-color: var(--card-bg);
 
       // Corner dots
       &::before, &::after {
@@ -133,13 +136,12 @@
       }
       &::before { top: -4px; left: -4px; }
       &::after { bottom: -4px; right: -4px; }
-      // Add more dots if needed via extra elements or box-shadows
 
       .cta-title {
         font-size: 24px;
         font-weight: 700;
         margin: 0 0 20px 0;
-        color: #000;
+        color: var(--text-main);
       }
 
       .action-buttons {

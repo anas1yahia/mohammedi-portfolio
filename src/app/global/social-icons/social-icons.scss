@@ -10,25 +10,50 @@
   align-items: center;
   gap: 32px;
   padding: 14px 38px;
-  background-color: #f6f4ee; 
-  border-top: 1px solid #99a1af;
-  border-right: 1px solid #99a1af;
+  background-color: var(--bg-color); 
+  border-top: 1px solid var(--border-color);
+  border-inline-end: 1px solid var(--border-color);
   border-top-right-radius: 24px;
+  border-top-left-radius: 0; // Standardize for LTR
   
+  // RTL handling
+  :host-context([dir="rtl"]) & {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 0;
+  }
+
   .icon-link {
     display: block;
     width: 24px;
     height: 24px;
     transition: transform 0.2s;
-    
-    img {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
+    color: var(--text-color);
     
     &:hover {
       transform: translateY(-3px);
+      color: #4fabe9;
+    }
+  }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: rotate(15deg);
+      color: #4fabe9;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
     }
   }
 }

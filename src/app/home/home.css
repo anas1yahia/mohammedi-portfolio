@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background-color: #f6f4ee;
+  background-color: var(--bg-color);
 }
 
 app-hero-section,
@@ -11,7 +11,7 @@ app-testimonials-section {
   display: block;
   width: 100%;
   min-height: 100vh;
-  background-color: #f6f4ee;
+  background-color: var(--bg-color);
   position: relative;
   scroll-margin-top: 70px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.02);

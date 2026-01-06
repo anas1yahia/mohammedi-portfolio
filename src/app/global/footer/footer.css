@@ -1,8 +1,8 @@
 :host {
   display: block;
   width: 100%;
-  background-color: #f6f4ee;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
 }
 
 .footer {
@@ -21,6 +21,10 @@
   height: 40px;
   width: auto;
   opacity: 0.8;
+  transition: filter 0.3s ease;
+}
+:host-context([data-theme=dark]) .footer .logo-area img {
+  filter: invert(1) brightness(2);
 }
 .footer .info-area {
   display: flex;
@@ -30,13 +34,13 @@
 .footer .info-area p {
   margin: 0;
   font-size: 14px;
-  color: #666;
-  font-family: "Noto Sans Arabic", sans-serif;
+  color: var(--text-muted);
   font-weight: 500;
 }
 .footer .info-area .credit {
   font-size: 12px;
-  color: #888;
+  color: var(--text-muted);
+  opacity: 0.8;
   font-style: italic;
 }
 

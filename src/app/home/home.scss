@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background-color: #f6f4ee;
+  background-color: var(--bg-color);
 }
 
 $nav-height: 70px;
@@ -13,7 +13,7 @@ app-testimonials-section {
   display: block;
   width: 100%;
   min-height: 100vh;
-  background-color: #f6f4ee;
+  background-color: var(--bg-color);
   
   // Standard scroll behavior
   position: relative;

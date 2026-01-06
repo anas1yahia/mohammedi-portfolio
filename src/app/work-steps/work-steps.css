@@ -2,7 +2,7 @@
   display: block;
   padding: 80px 0;
   font-family: "Noto Sans Arabic", sans-serif;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
 }
 
 .work-steps-section {
@@ -17,7 +17,7 @@
 .work-steps-section .section-header .title {
   font-size: 48px;
   font-weight: 700;
-  color: #000;
+  color: var(--text-main);
   margin: 0;
 }
 .work-steps-section .steps-grid {
@@ -35,7 +35,7 @@
   background-color: var(--card-color, #a3f05d);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px var(--shadow-color);
   transition: transform 0.2s;
 }
 .work-steps-section .steps-grid .ticket-card:hover {
@@ -57,7 +57,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   border-radius: 50%;
   inset-inline-start: -10px;
 }
@@ -74,12 +74,13 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  border-inline-start: 2px dashed rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+  border-inline-start: 2px dashed var(--border-color);
 }
 .work-steps-section .steps-grid .ticket-card .ticket-content .step-number {
   font-size: 14px;
   font-weight: 700;
-  color: #000;
+  color: var(--text-main);
   opacity: 0.6;
   margin-bottom: 10px;
   text-align: start;
@@ -90,13 +91,13 @@
 .work-steps-section .steps-grid .ticket-card .ticket-content .content-body .step-title {
   font-size: 20px;
   font-weight: 700;
-  color: #000;
+  color: var(--text-main);
   margin: 0 0 5px 0;
 }
 .work-steps-section .steps-grid .ticket-card .ticket-content .content-body .step-desc {
   font-size: 13px;
   font-weight: 500;
-  color: #333;
+  color: var(--text-muted);
   margin: 0;
   line-height: 1.4;
 }
@@ -110,6 +111,7 @@
   border-radius: 4px;
   text-align: center;
   position: relative;
+  background-color: var(--card-bg);
 }
 .work-steps-section .cta-container .cta-box::before, .work-steps-section .cta-container .cta-box::after {
   content: "";
@@ -131,7 +133,7 @@
   font-size: 24px;
   font-weight: 700;
   margin: 0 0 20px 0;
-  color: #000;
+  color: var(--text-main);
 }
 .work-steps-section .cta-container .cta-box .action-buttons {
   display: flex;

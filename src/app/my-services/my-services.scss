@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   padding: 100px 0;
-  background-color: #f6f4ee;
+  background-color: var(--bg-color);
 }
 
 .services-section {
@@ -22,19 +22,19 @@
     flex: 0 0 400px;
     position: sticky;
     top: 150px;
-
+    
     .main-title {
       font-size: 70px;
       font-weight: 900;
-      color: #000;
+      color: var(--text-main);
       line-height: 1.1;
       text-align: start;
-
+      
       .square-dot {
         display: inline-block;
         width: 18px;
         height: 18px;
-        background-color: #000;
+        background-color: var(--text-main);
         margin-inline-start: 15px;
       }
     }
@@ -45,12 +45,12 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
-
+    
     .service-item {
       position: relative;
       width: 100%;
       max-width: 700px;
-
+      
       // Staggered layout like projects
       &:nth-child(even) { align-self: flex-end; }
       &:nth-child(odd) { align-self: flex-start; }
@@ -59,7 +59,8 @@
         font-family: 'Inter', sans-serif;
         font-size: 80px;
         font-weight: 900;
-        color: rgba(0, 0, 0, 0.05);
+        color: var(--text-main);
+        opacity: 0.05;
         position: absolute;
         top: -40px;
         inset-inline-end: 20px;
@@ -71,14 +72,14 @@
         position: relative;
         z-index: 1;
         display: flex;
-        background-color: color-mix(in srgb, var(--accent-color), #fff 94%);
-        background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.03) 1px, transparent 0);
+        background-color: var(--card-bg);
+        background-image: radial-gradient(circle at 2px 2px, var(--border-color) 1px, transparent 0);
         background-size: 16px 16px;
-
+        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 10px 10px 0px 0px var(--shadow-color);
         height: 200px;
-
+        border: 2px solid var(--text-main);
 
         .ticket-stub {
           width: 100px;
@@ -92,14 +93,14 @@
           .service-icon {
             width: 40px;
             height: 40px;
-            filter: drop-shadow(0 0 8px rgba(var(--accent-color), 0.4));
+            filter: drop-shadow(0 0 8px rgba(79, 171, 233, 0.4));
           }
 
           .circle-cutout {
             position: absolute;
             width: 24px;
             height: 24px;
-            background: #f6f4ee; // Match section bg
+            background: var(--bg-color); // Match section bg
             border-radius: 50%;
             inset-inline-start: -12px;
 
@@ -114,7 +115,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          border-inline-start: 2px dashed rgba(0,0,0,0.1);
+          border-inline-start: 2px dashed var(--border-color);
           text-align: start;
           position: relative;
 
@@ -139,13 +140,13 @@
           .service-label {
             font-size: 28px;
             font-weight: 800;
-            color: #000;
+            color: var(--text-main);
             margin: 0 0 12px 0;
           }
 
           .service-desc {
             font-size: 16px;
-            color: #333;
+            color: var(--text-muted);
             margin: 0;
             line-height: 1.6;
             font-weight: 600;
