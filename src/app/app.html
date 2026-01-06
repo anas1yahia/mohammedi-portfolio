@@ -4,3 +4,19 @@
 <app-testimonials-section></app-testimonials-section>
 <app-work-steps></app-work-steps>
 <app-social-icons></app-social-icons>
+
+<!-- Premiere/DaVinci Style Language Transition Overlay -->
+<div class="lang-transition-overlay" *ngIf="langService.isTransitioning()">
+  <div class="timeline-container">
+    <div class="track video-track-3"><div class="clip"></div></div>
+    <div class="track video-track-2"><div class="clip"></div></div>
+    <div class="track video-track-1"><div class="clip"></div></div>
+    <div class="playhead">
+      <div class="playhead-line"></div>
+      <div class="playhead-top"></div>
+    </div>
+    <div class="track audio-track"><div class="clip"></div></div>
+  </div>
+  <div class="shutter shutter-left"></div>
+  <div class="shutter shutter-right"></div>
+</div>

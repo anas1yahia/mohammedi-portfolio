@@ -1,0 +1,170 @@
+.lang-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.lang-transition-overlay .timeline-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: transparent;
+  position: relative;
+}
+.lang-transition-overlay .track {
+  width: 100%;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.02);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.lang-transition-overlay .track.audio-track {
+  flex: 0.5;
+}
+.lang-transition-overlay .track.audio-track .clip {
+  background: #5dc983;
+  opacity: 0.4;
+}
+.lang-transition-overlay .track .clip {
+  position: absolute;
+  height: 60%;
+  top: 20%;
+  border-radius: 4px;
+  background: #4fabe9;
+  opacity: 0.6;
+  width: 25vw;
+  left: -30vw;
+}
+.lang-transition-overlay .video-track-3 .clip {
+  animation: clip-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0s forwards;
+}
+.lang-transition-overlay .video-track-2 .clip {
+  animation: clip-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+  width: 35vw;
+}
+.lang-transition-overlay .video-track-1 .clip {
+  animation: clip-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.05s forwards;
+  width: 45vw;
+}
+.lang-transition-overlay .audio-track .clip {
+  animation: clip-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s forwards;
+  width: 55vw;
+}
+.lang-transition-overlay .playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  width: 3px;
+  z-index: 100;
+  animation: playhead-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.lang-transition-overlay .playhead .playhead-line {
+  width: 3px;
+  height: 100%;
+  background: #4fabe9;
+  box-shadow: 0 0 25px rgba(79, 171, 233, 0.6);
+}
+.lang-transition-overlay .playhead .playhead-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #4fabe9;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+.lang-transition-overlay .shutter {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1;
+  pointer-events: none;
+}
+.lang-transition-overlay .shutter.shutter-left {
+  left: -100%;
+  animation: shutter-sweep-left 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.lang-transition-overlay .shutter.shutter-right {
+  right: -100%;
+  animation: shutter-sweep-right 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes clip-sweep {
+  0% {
+    left: -60vw;
+  }
+  100% {
+    left: 120vw;
+  }
+}
+@keyframes playhead-sweep {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+@keyframes shutter-sweep-left {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  50% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes shutter-sweep-right {
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+  50% {
+    right: 0;
+    opacity: 1;
+  }
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
+}
+body:has(.lang-transition-overlay) app-root > *:not(.lang-transition-overlay) {
+  animation: transition-zoom 0.8s ease-in-out forwards;
+}
+
+@keyframes transition-zoom {
+  0% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+  50% {
+    transform: scale(1.02);
+    filter: blur(4px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

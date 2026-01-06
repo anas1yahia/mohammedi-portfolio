@@ -9,6 +9,7 @@ export type Lang = 'ar' | 'en';
 export class LanguageService {
   private document = inject(DOCUMENT);
   currentLang = signal<Lang>('ar');
+  isTransitioning = signal(false);
 
   constructor() {
     // Initial sync from URL
@@ -136,7 +137,19 @@ export class LanguageService {
     return result || key;
   }
 
-  toggleLang() {
+  async toggleLang() {
+    if (this.isTransitioning()) return;
+
+    this.isTransitioning.set(true);
+    
+    // Wait for playhead to reach middle (400ms of 800ms)
+    await new Promise(resolve => setTimeout(resolve, 400));
+    
     this.currentLang.update(l => l === 'ar' ? 'en' : 'ar');
+    
+    // Wait for animation to finish (remaining 400ms)
+    await new Promise(resolve => setTimeout(resolve, 400));
+    
+    this.isTransitioning.set(false);
   }
 }
