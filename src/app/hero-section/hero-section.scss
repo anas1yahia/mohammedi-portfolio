@@ -7,7 +7,7 @@
 .hero-section {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -75,6 +75,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 15px;
 
         .action-row {
@@ -261,7 +262,7 @@
 
     .portfolio-preview {
       width: 323px;
-      height: 131px;
+      height: 16rem;
       background-color: #d1d5dc;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);

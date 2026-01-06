@@ -1,0 +1,142 @@
+:host {
+  display: block;
+  width: 100%;
+  padding: 100px 0;
+  
+  // Graph Paper Grid
+  background-color: transparent; 
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.projects-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  font-family: 'Noto Sans Arabic', sans-serif;
+  direction: rtl;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .header-column {
+    flex: 0 0 400px; // Fixed width for title area
+    position: sticky;
+    top: 150px;
+    
+    .main-title {
+      font-size: 70px;
+      font-weight: 900;
+      color: #000;
+      line-height: 1.1;
+      text-align: right;
+      
+      .square-dot {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-color: #000;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .projects-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 150px; // Spacing between items
+    padding-top: 50px; // Offset start
+    
+    .project-item {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      
+      // Staggered Layout
+      // RTL: align-self: flex-start is Right. flex-end is Left.
+      &.item-01 { 
+        align-self: flex-end; // Left
+      }
+      &.item-02 { 
+        align-self: flex-start; // Right (Indented?)
+        margin-top: 50px; // Extra spacing?
+      }
+      &.item-03 { 
+        align-self: flex-end; // Left
+        margin-top: 50px;
+      }
+      
+      .number {
+        font-family: 'Inter', sans-serif; // Numbers look Latin
+        font-size: 100px;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 0.15);
+        position: absolute;
+        top: -80px;
+        right: -20px; // Overlap right
+        z-index: 0;
+        line-height: 1;
+      }
+      
+      .project-content {
+        position: relative;
+        z-index: 1;
+        
+        .item-title {
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 15px;
+          color: #000;
+        }
+        
+        .image-card {
+          width: 100%;
+          aspect-ratio: 3/4; // Book ratio
+          background: #f0f0f0;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+          transition: transform 0.3s ease;
+          
+          &:hover {
+            transform: translateY(-10px);
+          }
+          
+          img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+    }
+    .header-column {
+      position: static;
+      width: 100%;
+      margin-bottom: 50px;
+      
+      .main-title { text-align: center; font-size: 50px; }
+    }
+    .projects-list {
+      width: 100%;
+      align-items: center;
+      gap: 80px;
+      
+      .project-item {
+        align-self: center !important;
+        margin: 0 !important;
+      }
+    }
+  }
+}

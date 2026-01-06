@@ -1,0 +1,33 @@
+:host {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.social-bar {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 14px 38px;
+  background-color: #f6f4ee;
+  border-top: 1px solid #99a1af;
+  border-right: 1px solid #99a1af;
+  border-top-right-radius: 24px;
+}
+.social-bar .icon-link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s;
+}
+.social-bar .icon-link img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.social-bar .icon-link:hover {
+  transform: translateY(-3px);
+}
+
+/*# sourceMappingURL=social-icons.css.map */
