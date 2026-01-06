@@ -3,7 +3,7 @@
 
 :root {
   --bg-color: #f6f4ee;
-  --text-color: #369836; // This was var(--gray-700) roughly
+  --text-color: var(--gray-700);
   --text-main: #262526;
   --text-muted: #717070;
   --card-bg: #ffffff;
