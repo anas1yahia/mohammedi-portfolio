@@ -1,23 +1,40 @@
 :host {
   display: block;
+  background-color: #f6f4ee;
 }
 
-// Select all direct children components of HomeComponent
+$nav-height: 70px;
+
 app-hero-section,
 app-my-projects,
 app-my-services,
 app-work-steps,
 app-testimonials-section {
   display: block;
-  position: sticky;
-  top: 60px;
   width: 100%;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05); // Shadow on top to give depth
+  min-height: 100vh;
+  background-color: #f6f4ee;
+  
+  // Standard scroll behavior
+  position: relative;
+  
+  // Ensure content aligns correctly with navbar when scrolling/snapping
+  scroll-margin-top: $nav-height;
+  
+  // Clean separation
+  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
 }
 
-// Z-index management for stacking order
-app-hero-section { z-index: 1; }
-app-my-projects { z-index: 2; }
-app-my-services { z-index: 3; }
-app-work-steps { z-index: 4; }
-app-testimonials-section { z-index: 5; }
+// Global scroll snap (applied to the main scrolling container, usually html/body)
+:host-context(html) {
+  scroll-snap-type: y proximity; // Proximity is often more "comfortable" than mandatory
+  scroll-behavior: smooth;
+}
+
+app-hero-section,
+app-my-projects,
+app-my-services,
+app-work-steps,
+app-testimonials-section {
+  scroll-snap-align: start;
+}
