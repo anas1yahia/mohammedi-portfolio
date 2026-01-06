@@ -28,11 +28,11 @@
     .welcome-header {
       width: 100%;
       position: relative;
-      
+
       .text-content {
         text-align: right;
         margin-bottom: 20px;
-        
+
         .welcome-title {
           font-size: 41px;
           font-weight: 600;
@@ -57,7 +57,7 @@
         color: white;
         padding: 8px 24px;
         border-radius: 31px;
-        
+
         .role-text {
           font-weight: 700;
           font-size: 15px;
@@ -81,13 +81,13 @@
           display: flex;
           align-items: flex-start;
           flex-direction: row-reverse; // Force LTR visual order (Left -> Right) for alignment matching Figma X coords
-          
+
           .main-btn {
             height: 62px;
             display: flex;
             align-items: center;
             justify-content: center;
-            
+
             .btn-text {
               color: white;
               font-weight: 700;
@@ -101,28 +101,28 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            
+
             .icon-box {
               width: 62px;
               height: 64px;
               display: flex;
               align-items: center;
               justify-content: center;
-              
+
               svg { color: white; width: 24px; height: 24px; }
             }
-            
+
             .tab-deco {
               width: 31px;
               height: 6px;
             }
           }
-          
+
           &.need-design {
              // [Button (Left)] [Icon (Right)]
              justify-content: flex-start; // Align to Left? No, frame x=31 inside 286?
              // Let's assume standard flow.
-             
+
              .main-btn {
                width: 224px;
                background-color: #5435f7;
@@ -137,7 +137,7 @@
              // [Icon (Left)] [Button (Right)]
              // HTML: [Icon] [Button]. row-reverse -> [Icon] Left, [Button] Right.
              // Just need to ensure alignment.
-             
+
              .main-btn {
                width: 181px;
                background-color: #4fabe9;
@@ -157,7 +157,7 @@
 
         .stat-item {
           text-align: center;
-          
+
           .stat-num {
             display: block;
             font-size: 38px;
@@ -179,7 +179,7 @@
       flex-direction: column;
       gap: 10px;
       width: 100%;
-      align-items: flex-end;
+      align-items: flex-start;
 
       .service-row {
         display: flex;
@@ -214,7 +214,7 @@
       height: 369px;
       img { width: 100%; height: 100%; object-fit: contain; }
     }
-    
+
     .sub-img-wrapper {
       width: 95px;
       height: 53px;
@@ -232,13 +232,13 @@
       flex-direction: column;
       gap: 16px;
       width: 100%;
-      align-items: flex-end;
+      align-items: flex-start;
 
       .deco-icons-container {
         height: 141px;
         width: 311px;
         position: relative;
-        direction: ltr; 
+        direction: ltr;
         margin-right: 23px;
 
         .deco { position: absolute; }

@@ -160,7 +160,7 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 .hero-section .welcome-col .services-grid .service-row {
   display: flex;
@@ -225,7 +225,7 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 .hero-section .profile-col .profile-details .deco-icons-container {
   height: 141px;
