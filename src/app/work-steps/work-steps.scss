@@ -81,34 +81,33 @@
         // Dotted line separator
         border-inline-start: 2px dashed var(--border-color);
 
-        .step-number {
-          font-size: 14px;
-          font-weight: 700;
-          color: var(--text-main);
-          opacity: 0.6;
-          margin-bottom: 10px;
-          text-align: start; 
-        }
-
-        .content-body {
-          text-align: start;
-          
-          .step-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--text-main);
-            margin: 0 0 5px 0;
-          }
-          
-          .step-desc {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-muted);
-            margin: 0;
-            line-height: 1.4;
-          }
-        }
-      }
+                  .step-number {
+                    font-size: 14px;
+                    font-weight: 800;
+                    color: #000;
+                    opacity: 0.8;
+                    margin-bottom: 10px;
+                    text-align: start; 
+                  }
+        
+                  .content-body {
+                    text-align: start;
+                    
+                    .step-title {
+                      font-size: 20px;
+                      font-weight: 800;
+                      color: #000;
+                      margin: 0 0 5px 0;
+                    }
+                    
+                    .step-desc {
+                      font-size: 14px;
+                      font-weight: 700;
+                      color: #111; // High contrast
+                      margin: 0;
+                      line-height: 1.5;
+                    }
+                  }      }
     }
   }
 

@@ -78,9 +78,9 @@
 }
 .work-steps-section .steps-grid .ticket-card .ticket-content .step-number {
   font-size: 14px;
-  font-weight: 700;
-  color: var(--text-main);
-  opacity: 0.6;
+  font-weight: 800;
+  color: #000;
+  opacity: 0.8;
   margin-bottom: 10px;
   text-align: start;
 }
@@ -89,16 +89,16 @@
 }
 .work-steps-section .steps-grid .ticket-card .ticket-content .content-body .step-title {
   font-size: 20px;
-  font-weight: 700;
-  color: var(--text-main);
+  font-weight: 800;
+  color: #000;
   margin: 0 0 5px 0;
 }
 .work-steps-section .steps-grid .ticket-card .ticket-content .content-body .step-desc {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 .work-steps-section .cta-container {
   display: flex;

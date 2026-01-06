@@ -149,7 +149,10 @@
 
           .service-desc {
             font-size: 16px;
-            color: var(--text-muted);
+            color: #111; // High contrast dark gray
+            :host-context([data-theme='dark']) & {
+              color: #eee; // High contrast light gray
+            }
             margin: 0;
             line-height: 1.6;
             font-weight: 600;

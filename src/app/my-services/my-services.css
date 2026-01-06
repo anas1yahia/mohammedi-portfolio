@@ -145,7 +145,12 @@
 }
 .services-section .services-list .service-item .service-ticket .ticket-content .service-desc {
   font-size: 16px;
-  color: var(--text-muted);
+  color: #111;
+}
+:host-context([data-theme=dark]) .services-section .services-list .service-item .service-ticket .ticket-content .service-desc {
+  color: #eee;
+}
+.services-section .services-list .service-item .service-ticket .ticket-content .service-desc {
   margin: 0;
   line-height: 1.6;
   font-weight: 600;
