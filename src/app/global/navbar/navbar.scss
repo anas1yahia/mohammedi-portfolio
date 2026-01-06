@@ -11,8 +11,23 @@
 
 .navbar {
   width: 100%;
-  direction: rtl;
-  font-family: 'Noto Sans Arabic', sans-serif;
+
+  .lang-toggle {
+    background: rgba(79, 171, 233, 0.1);
+    border: 1px solid rgba(79, 171, 233, 0.3);
+    color: #4fabe9;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+
+    &:hover {
+      background: rgba(79, 171, 233, 0.2);
+    }
+  }
 
   .navbar-container {
     max-width: 1264px;

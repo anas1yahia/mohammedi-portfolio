@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject, computed } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,15 +12,20 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   isMenuOpen = signal(false);
+  langService = inject(LanguageService);
 
-  navItems = signal([
-    { label: 'بم أساعدك', path: '/help', styles: { 'font-size': '14px', 'color': '#717070' } },
-    { label: 'الاسعار', path: '/pricing', styles: { 'font-size': '13px', 'color': '#646362' } },
-    { label: 'اعمالي', path: '/portfolio', styles: { 'font-size': '13px', 'color': '#777676' } },
-    { label: 'خدماتي', path: '/services', styles: { 'font-size': '13px', 'color': '#6f6f6e' } }
+  navItems = computed(() => [
+    { label: this.langService.translate('nav.help'), path: '/help', styles: { 'font-size': '14px', 'color': '#717070' } },
+    { label: this.langService.translate('nav.pricing'), path: '/pricing', styles: { 'font-size': '13px', 'color': '#646362' } },
+    { label: this.langService.translate('nav.portfolio'), path: '/portfolio', styles: { 'font-size': '13px', 'color': '#777676' } },
+    { label: this.langService.translate('nav.services'), path: '/services', styles: { 'font-size': '13px', 'color': '#6f6f6e' } }
   ]);
 
   toggleMenu() {
     this.isMenuOpen.update(val => !val);
+  }
+
+  toggleLanguage() {
+    this.langService.toggleLang();
   }
 }

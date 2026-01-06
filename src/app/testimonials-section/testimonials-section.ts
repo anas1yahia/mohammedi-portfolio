@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TestimonialCardComponent } from './testimonial-card/testimonial-card';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-testimonials-section',
@@ -10,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './testimonials-section.scss'
 })
 export class TestimonialsSectionComponent {
+  langService = inject(LanguageService);
   testimonials = [
     {
       content: `كانت قدرتك على التنظيم والترتيب مذهلة لقد جعلت كل مرحلة من مراحل العمل واضحة ومخططا لها بدقة مما سهل علينا اتخاذ الخطوات الصحيحة في الوقت المناسب إلى جانب ذلك أدهشني بعد نظرك في التخطيط والتوجيه فقد استطعت رؤية الصورة الكاملة للمشروع والعمل على تحقيقها بشكل احترافي ومتكامل ما أقدره أيضا هو مرونتك في التعامل مع التغييرات والتحديات التي واجهتنا لم يكن هناك طلب أو تعديل إلا واستقبلته بابتسامة وباحترافية عالية مما جعلني أشعر بثقة كبيرة في أنك الشخص المناسب لهذه المهمة`,

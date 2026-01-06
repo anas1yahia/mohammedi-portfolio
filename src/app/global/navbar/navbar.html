@@ -1,4 +1,4 @@
-<nav class="navbar" dir="rtl">
+<nav class="navbar">
   <div class="navbar-container">
     <!-- Logo (Right) -->
     <div class="logo">
@@ -12,7 +12,7 @@
       <!-- Welcome Item (Always styled as pill) -->
       <li class="nav-item">
         <a routerLink="/welcome" class="nav-link welcome-pill">
-          مرحبا
+          {{ langService.translate('nav.welcome') }}
         </a>
       </li>
 
@@ -25,14 +25,19 @@
       }
     </ul>
 
-    <!-- Left Actions (CTA + Burger) -->
+    <!-- Left Actions (CTA + Burger + Lang) -->
     <div class="left-actions">
+      <!-- Lang Switcher -->
+      <button class="lang-toggle" (click)="toggleLanguage()">
+        {{ langService.currentLang() === 'ar' ? 'English' : 'عربي' }}
+      </button>
+
       <!-- CTA Button (Left) -->
       <a routerLink="/start-project" class="cta-button">
         <!-- Decor Left (Visual Left, Physical Left) -->
         <div class="deco-icon deco-left"></div>
         
-        <span class="cta-text">قدم مشروعك</span>
+        <span class="cta-text">{{ langService.translate('nav.cta') }}</span>
         
         <!-- Decor Right (Visual Right, Physical Right of the container?) -->
         <div class="deco-icon deco-right"></div>
@@ -65,7 +70,7 @@
     <ul class="mobile-nav-menu">
       <li class="nav-item">
         <a routerLink="/welcome" class="nav-link welcome-pill" (click)="toggleMenu()">
-          مرحبا
+          {{ langService.translate('nav.welcome') }}
         </a>
       </li>
       @for (item of navItems(); track item.label) {
