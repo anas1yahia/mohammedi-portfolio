@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeroSectionComponent } from '../hero-section/hero-section';
 import { MyProjectsComponent } from '../my-projects/my-projects';
+import { MyServicesComponent } from '../my-services/my-services';
 import { WorkStepsComponent } from '../work-steps/work-steps';
 import { TestimonialsSectionComponent } from '../testimonials-section/testimonials-section';
 
@@ -10,6 +11,7 @@ import { TestimonialsSectionComponent } from '../testimonials-section/testimonia
   imports: [
     HeroSectionComponent,
     MyProjectsComponent,
+    MyServicesComponent,
     WorkStepsComponent,
     TestimonialsSectionComponent
   ],

@@ -1,0 +1,200 @@
+:host {
+  display: block;
+  width: 100%;
+  padding: 100px 0;
+  background-color: #f6f4ee;
+}
+
+.services-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  font-family: 'Noto Sans Arabic', sans-serif;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .header-column {
+    flex: 0 0 400px; 
+    position: sticky;
+    top: 150px;
+    
+    .main-title {
+      font-size: 70px;
+      font-weight: 900;
+      color: #000;
+      line-height: 1.1;
+      text-align: start;
+      
+      .square-dot {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-color: #000;
+        margin-inline-start: 15px;
+      }
+    }
+  }
+
+  .services-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+    
+    .service-item {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      
+      // Staggered layout like projects
+      &:nth-child(even) { align-self: flex-end; }
+      &:nth-child(odd) { align-self: flex-start; }
+
+      .number {
+        font-family: 'Inter', sans-serif;
+        font-size: 80px;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 0.05);
+        position: absolute;
+        top: -40px;
+        inset-inline-end: 20px;
+        z-index: 0;
+        line-height: 1;
+      }
+
+      .service-ticket {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.1);
+        height: 200px;
+        border: 2px solid #000;
+
+        .ticket-stub {
+          width: 100px;
+          background: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          color: var(--accent-color, #4fabe9);
+
+          .service-icon {
+            width: 40px;
+            height: 40px;
+          }
+
+          .circle-cutout {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: #f6f4ee; // Match section bg
+            border-radius: 50%;
+            inset-inline-start: -12px;
+
+            &.top { top: -12px; }
+            &.bottom { bottom: -12px; }
+          }
+        }
+
+        .ticket-content {
+          flex: 1;
+          padding: 32px 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-inline-start: 2px dashed rgba(0,0,0,0.1);
+          text-align: start;
+
+          .service-label {
+            font-size: 28px;
+            font-weight: 800;
+            color: #000;
+            margin: 0 0 12px 0;
+          }
+
+          .service-desc {
+            font-size: 16px;
+            color: #444;
+            margin: 0;
+            line-height: 1.6;
+            font-weight: 500;
+          }
+
+          .decor-line {
+            position: absolute;
+            bottom: 0;
+            inset-inline-start: 80px;
+            inset-inline-end: 0;
+            height: 4px;
+            background: repeating-linear-gradient(
+              90deg,
+              var(--accent-color) 0,
+              var(--accent-color) 10px,
+              transparent 10px,
+              transparent 20px
+            );
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+    
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-column {
+      position: static;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+
+      .main-title {
+        text-align: center;
+        font-size: 50px;
+      }
+    }
+
+    .services-list {
+      width: 100%;
+      align-items: center;
+      
+      .service-item {
+        align-self: center !important;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-column .main-title { font-size: 36px; }
+    
+    .services-list {
+      .service-item {
+        .number { font-size: 50px; top: -30px; }
+        
+        .service-ticket {
+          height: auto;
+          min-height: 140px;
+          
+          .ticket-stub { width: 60px; }
+          .ticket-content { padding: 20px; }
+        }
+      }
+    }
+  }
+}

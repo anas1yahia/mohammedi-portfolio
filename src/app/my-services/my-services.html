@@ -1,0 +1,41 @@
+<section class="services-section">
+  <div class="container">
+
+    <!-- Sticky Header -->
+    <div class="header-column">
+      <h2 class="main-title">
+        {{ langService.translate('services.title') }} <span class="square-dot"></span>
+      </h2>
+    </div>
+
+    <!-- Services List -->
+    <div class="services-list">
+      @for (service of services(); track service.id) {
+        <div class="service-item" [style.--accent-color]="service.color">
+          <span class="number">{{ service.id }}</span>
+
+          <div class="service-ticket">
+            <!-- Left Stub (Icon) -->
+            <div class="ticket-stub">
+              <div class="circle-cutout top"></div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path [attr.d]="service.icon"></path>
+                </svg>
+              </div>
+              <div class="circle-cutout bottom"></div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="ticket-content">
+              <h3 class="service-label">{{ service.label }}</h3>
+              <p class="service-desc">{{ service.desc }}</p>
+              <div class="decor-line"></div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

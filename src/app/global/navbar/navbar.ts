@@ -18,7 +18,7 @@ export class NavbarComponent {
     { label: this.langService.translate('nav.help'), path: '/', fragment: 'work-steps', styles: { 'font-size': '14px', 'color': '#717070' } },
     { label: this.langService.translate('nav.pricing'), path: '/', fragment: 'work-steps', styles: { 'font-size': '13px', 'color': '#646362' } },
     { label: this.langService.translate('nav.portfolio'), path: '/', fragment: 'portfolio', styles: { 'font-size': '13px', 'color': '#777676' } },
-    { label: this.langService.translate('nav.services'), path: '/', fragment: 'work-steps', styles: { 'font-size': '13px', 'color': '#6f6f6e' } }
+    { label: this.langService.translate('nav.services'), path: '/', fragment: 'services', styles: { 'font-size': '13px', 'color': '#6f6f6e' } }
   ]);
 
   toggleMenu() {

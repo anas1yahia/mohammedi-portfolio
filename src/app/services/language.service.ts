@@ -69,6 +69,25 @@ export class LanguageService {
         title: 'تصاميم أغلفة الكتب والمجلات',
         cat: 'تصميم غلاف'
       },
+      services: {
+        title: 'خدماتي الإبداعية',
+        branding: {
+          label: 'بناء الهوية البصرية',
+          desc: 'تصميم شعارات وهوية كاملة تعبر عن قيم مشروعك وتجعله فريداً.'
+        },
+        uiux: {
+          label: 'تصميم تجربة المستخدم',
+          desc: 'واجهات مستخدم جذابة وسهلة الاستخدام تضمن أفضل تجربة لعملائك.'
+        },
+        motion: {
+          label: 'الموشن جرافيك',
+          desc: 'تحويل الأفكار إلى قصص متحركة جذابة تشد الانتباه وتوصل الرسالة.'
+        },
+        social: {
+          label: 'تصاميم السوشل ميديا',
+          desc: 'محتوى بصري احترافي لمنصات التواصل الاجتماعي يزيد من تفاعل جمهورك.'
+        }
+      },
       workSteps: {
         title: 'خطوات العمل معي',
         step1Title: 'تواصل معي',
@@ -110,6 +129,25 @@ export class LanguageService {
       projects: {
         title: 'Book and Magazine Cover Designs',
         cat: 'Cover Design'
+      },
+      services: {
+        title: 'My Creative Services',
+        branding: {
+          label: 'Branding & Identity',
+          desc: 'Designing logos and full identities that express your project values and make it unique.'
+        },
+        uiux: {
+          label: 'UI/UX Design',
+          desc: 'Attractive and easy-to-use user interfaces that ensure the best experience for your customers.'
+        },
+        motion: {
+          label: 'Motion Graphics',
+          desc: 'Turning ideas into engaging animated stories that grab attention and deliver the message.'
+        },
+        social: {
+          label: 'Social Media Design',
+          desc: 'Professional visual content for social media platforms that increases audience engagement.'
+        }
       },
       workSteps: {
         title: 'How I Work',
