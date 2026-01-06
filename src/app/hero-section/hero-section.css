@@ -280,12 +280,134 @@
   color: #4fabe9;
   font-weight: 700;
 }
-.hero-section .profile-col .portfolio-preview {
-  width: 323px;
-  height: 16rem;
-  background-color: #d1d5dc;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.hero-section .profile-col .tools-container {
+  position: relative;
+  height: 280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section .profile-col .tools-container .pencil {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  direction: ltr;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  filter: grayscale(1) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.15));
+  opacity: 0.8;
+}
+.hero-section .profile-col .tools-container .pencil:hover {
+  transform: scale(1.1) rotate(0deg) !important;
+  filter: grayscale(0) drop-shadow(0 20px 30px rgba(0, 0, 0, 0.25));
+  opacity: 1;
+  z-index: 10;
+}
+.hero-section .profile-col .tools-container .pencil .pencil-eraser {
+  width: 20px;
+  height: 100%;
+  background-color: #ff9fb2;
+  border-radius: 5px 0 0 5px;
+  position: relative;
+}
+.hero-section .profile-col .tools-container .pencil .pencil-ferrule {
+  width: 14px;
+  height: 115%;
+  background: linear-gradient(to bottom, #888, #ddd, #bbb, #eee, #888);
+  border-radius: 2px;
+  box-shadow: inset 1px 0 3px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.hero-section .profile-col .tools-container .pencil .pencil-body {
+  width: 180px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0.2) 100%);
+}
+.hero-section .profile-col .tools-container .pencil .pencil-body .tool-text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  pointer-events: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.hero-section .profile-col .tools-container .pencil .pencil-tip {
+  width: 32px;
+  height: 100%;
+  background-color: #dcb083;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  position: relative;
+}
+.hero-section .profile-col .tools-container .pencil .pencil-tip::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%;
+  width: 10px;
+  height: 50%;
+  background-color: inherit;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+.hero-section .profile-col .tools-container .pencil.ps {
+  transform: rotate(-12deg) translate(-20px, -15px);
+}
+.hero-section .profile-col .tools-container .pencil.ps .pencil-body {
+  background-color: #001E36;
+}
+.hero-section .profile-col .tools-container .pencil.ps .pencil-tip::after {
+  background-color: #31A8FF;
+}
+.hero-section .profile-col .tools-container .pencil.ai {
+  transform: rotate(15deg) translate(25px, -10px);
+}
+.hero-section .profile-col .tools-container .pencil.ai .pencil-body {
+  background-color: #330000;
+}
+.hero-section .profile-col .tools-container .pencil.ai .pencil-tip::after {
+  background-color: #FF9A00;
+}
+.hero-section .profile-col .tools-container .pencil.pr {
+  transform: rotate(-5deg) translate(-35px, 10px);
+}
+.hero-section .profile-col .tools-container .pencil.pr .pencil-body {
+  background-color: #2D0033;
+}
+.hero-section .profile-col .tools-container .pencil.pr .pencil-tip::after {
+  background-color: #EA77FF;
+}
+.hero-section .profile-col .tools-container .pencil.ae {
+  transform: rotate(20deg) translate(15px, 25px);
+}
+.hero-section .profile-col .tools-container .pencil.ae .pencil-body {
+  background-color: #00005B;
+}
+.hero-section .profile-col .tools-container .pencil.ae .pencil-tip::after {
+  background-color: #D291FF;
+}
+.hero-section .profile-col .tools-container .pencil.bl {
+  transform: rotate(-18deg) translate(5px, 40px);
+}
+.hero-section .profile-col .tools-container .pencil.bl .pencil-body {
+  background-color: #222;
+}
+.hero-section .profile-col .tools-container .pencil.bl .pencil-tip::after {
+  background-color: #EA7600;
+}
+.hero-section .profile-col .tools-container .pencil.bl .tool-text {
+  color: #EA7600;
 }
 @media (max-width: 1024px) {
   .hero-section {
@@ -376,9 +498,9 @@
     height: auto;
     max-height: 300px;
   }
-  .hero-section .profile-col .portfolio-preview {
+  .hero-section .profile-col .tools-container {
     width: 100%;
-    height: 200px;
+    max-width: 350px;
   }
   .hero-section .profile-col .profile-details .deco-icons-container {
     display: none;
