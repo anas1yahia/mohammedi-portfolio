@@ -12,7 +12,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  direction: rtl;
 
   .column {
     display: flex;
@@ -30,7 +29,7 @@
       position: relative;
 
       .text-content {
-        text-align: right;
+        text-align: start;
         margin-bottom: 20px;
 
         .welcome-title {
@@ -52,7 +51,7 @@
       .role-badge {
         position: absolute;
         top: 0;
-        left: 0;
+        inset-inline-end: 0;
         background-color: #4fabe9;
         color: white;
         padding: 8px 24px;
@@ -81,7 +80,7 @@
         .action-row {
           display: flex;
           align-items: flex-start;
-          flex-direction: row-reverse; // Force LTR visual order (Left -> Right) for alignment matching Figma X coords
+          flex-direction: row; 
 
           .main-btn {
             height: 62px;
@@ -120,10 +119,6 @@
           }
 
           &.need-design {
-             // [Button (Left)] [Icon (Right)]
-             justify-content: flex-start; // Align to Left? No, frame x=31 inside 286?
-             // Let's assume standard flow.
-
              .main-btn {
                width: 224px;
                background-color: #5435f7;
@@ -135,10 +130,7 @@
           }
 
           &.contact-me {
-             // [Icon (Left)] [Button (Right)]
-             // HTML: [Icon] [Button]. row-reverse -> [Icon] Left, [Button] Right.
-             // Just need to ensure alignment.
-
+             flex-direction: row-reverse;
              .main-btn {
                width: 181px;
                background-color: #4fabe9;

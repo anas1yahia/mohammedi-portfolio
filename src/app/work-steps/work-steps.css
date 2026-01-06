@@ -58,7 +58,7 @@
   height: 20px;
   background-color: #ffffff;
   border-radius: 50%;
-  left: -10px;
+  inset-inline-start: -10px;
 }
 .work-steps-section .steps-grid .ticket-card .ticket-stub .circle-cutout.top {
   top: -10px;
@@ -73,7 +73,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  border-right: 2px dashed rgba(0, 0, 0, 0.1);
+  border-inline-start: 2px dashed rgba(0, 0, 0, 0.1);
 }
 .work-steps-section .steps-grid .ticket-card .ticket-content .step-number {
   font-size: 14px;
@@ -81,10 +81,10 @@
   color: #000;
   opacity: 0.6;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: start;
 }
 .work-steps-section .steps-grid .ticket-card .ticket-content .content-body {
-  text-align: right;
+  text-align: start;
 }
 .work-steps-section .steps-grid .ticket-card .ticket-content .content-body .step-title {
   font-size: 20px;

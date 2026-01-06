@@ -16,7 +16,6 @@
   margin: 0 auto;
   padding: 0 40px;
   font-family: 'Noto Sans Arabic', sans-serif;
-  direction: rtl;
 
   .container {
     display: flex;
@@ -35,14 +34,14 @@
       font-weight: 900;
       color: #000;
       line-height: 1.1;
-      text-align: right;
+      text-align: start;
       
       .square-dot {
         display: inline-block;
         width: 18px;
         height: 18px;
         background-color: #000;
-        margin-right: 15px;
+        margin-inline-start: 15px;
       }
     }
   }
@@ -71,7 +70,7 @@
         color: rgba(0, 0, 0, 0.15);
         position: absolute;
         top: -80px;
-        right: -20px;
+        inset-inline-end: -20px;
         z-index: 0;
         line-height: 1;
       }
@@ -106,18 +105,9 @@
         .info-area {
           display: flex;
           align-items: center;
-          justify-content: space-between; // Arrow Left, Text Right
+          justify-content: space-between; 
           margin-top: 20px;
-          padding: 0 10px; // Inner padding for text row
-          
-          // Arrow Circle (Left side in RTL visual? No, Left side is End in RTL)
-          // Design 1:354 x=0 (Left). Text x=38 (Right).
-          // So visual order: [Arrow] ... [Text].
-          // HTML: [Arrow] [Text].
-          // RTL Default: [Arrow (Right)] [Text (Left)].
-          // To match visual [Arrow (Left)] [Text (Right)], we need LTR flow or swap.
-          // I will use `flex-direction: row-reverse` to force visual LTR order: [Arrow] Left, [Text] Right.
-          flex-direction: row-reverse; 
+          padding: 0 10px; 
           
           .arrow-circle {
             width: 28px;
@@ -139,7 +129,7 @@
           }
           
           .text-details {
-            text-align: right;
+            text-align: start;
             
             .card-title {
               font-size: 18px;
@@ -151,7 +141,7 @@
             .meta {
               display: flex;
               align-items: center;
-              justify-content: flex-end; // Align right
+              justify-content: flex-start; 
               gap: 5px;
               font-size: 12px;
               color: #666;
