@@ -142,13 +142,13 @@ export class LanguageService {
 
     this.isTransitioning.set(true);
     
-    // Wait for playhead to reach middle (400ms of 800ms)
-    await new Promise(resolve => setTimeout(resolve, 400));
+    // Wait for playhead to reach middle (750ms of 1500ms)
+    await new Promise(resolve => setTimeout(resolve, 750));
     
     this.currentLang.update(l => l === 'ar' ? 'en' : 'ar');
     
-    // Wait for animation to finish (remaining 400ms)
-    await new Promise(resolve => setTimeout(resolve, 400));
+    // Wait for animation to finish (remaining 750ms)
+    await new Promise(resolve => setTimeout(resolve, 750));
     
     this.isTransitioning.set(false);
   }

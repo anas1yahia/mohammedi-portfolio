@@ -46,10 +46,10 @@
   }
 
   // Staggered clip animations with longer sweeps
-  .video-track-3 .clip { animation: clip-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0s forwards; }
-  .video-track-2 .clip { animation: clip-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards; width: 35vw; }
-  .video-track-1 .clip { animation: clip-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.05s forwards; width: 45vw; }
-  .audio-track .clip { animation: clip-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s forwards; width: 55vw; }
+  .video-track-3 .clip { animation: clip-sweep 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0s forwards; }
+  .video-track-2 .clip { animation: clip-sweep 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards; width: 35vw; }
+  .video-track-1 .clip { animation: clip-sweep 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards; width: 45vw; }
+  .audio-track .clip { animation: clip-sweep 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards; width: 55vw; }
 
   .playhead {
     position: absolute;
@@ -58,7 +58,7 @@
     left: -10px;
     width: 3px;
     z-index: 100;
-    animation: playhead-sweep 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: playhead-sweep 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 
     .playhead-line {
       width: 3px;
@@ -92,12 +92,12 @@
     
     &.shutter-left {
       left: -100%;
-      animation: shutter-sweep-left 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      animation: shutter-sweep-left 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
     
     &.shutter-right {
       right: -100%;
-      animation: shutter-sweep-right 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      animation: shutter-sweep-right 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
   }
 }
@@ -126,7 +126,7 @@
 
 body:has(.lang-transition-overlay) {
   app-root > *:not(.lang-transition-overlay) {
-    animation: transition-zoom 0.8s ease-in-out forwards;
+    animation: transition-zoom 1.5s ease-in-out forwards;
   }
 }
 
