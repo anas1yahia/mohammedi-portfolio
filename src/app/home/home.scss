@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+// Select all direct children components of HomeComponent
+app-hero-section,
+app-my-projects,
+app-my-services,
+app-work-steps,
+app-testimonials-section {
+  display: block;
+  position: sticky;
+  top: 60px;
+  width: 100%;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05); // Shadow on top to give depth
+}
+
+// Z-index management for stacking order
+app-hero-section { z-index: 1; }
+app-my-projects { z-index: 2; }
+app-my-services { z-index: 3; }
+app-work-steps { z-index: 4; }
+app-testimonials-section { z-index: 5; }
