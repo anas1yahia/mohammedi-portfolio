@@ -68,7 +68,7 @@
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
 }
-.navbar .nav-menu .nav-item .nav-link:hover, .navbar .nav-menu .nav-item .nav-link.active, .navbar .nav-menu .nav-item .nav-link.welcome-pill {
+.navbar .nav-menu .nav-item .nav-link:hover, .navbar .nav-menu .nav-item .nav-link.active {
   color: #4fabe9 !important;
   font-weight: 600;
   border-left: 2px solid #4fabe9;
@@ -230,7 +230,7 @@
   border-radius: 30px;
   transition: all 0.2s;
 }
-.bottom-sheet .mobile-nav-menu .nav-item .nav-link.active, .bottom-sheet .mobile-nav-menu .nav-item .nav-link.welcome-pill {
+.bottom-sheet .mobile-nav-menu .nav-item .nav-link.active {
   color: #4fabe9;
   background: rgba(79, 171, 233, 0.1);
 }

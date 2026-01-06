@@ -9,16 +9,16 @@
 
     <!-- Navigation Menu (Center) -->
     <ul class="nav-menu desktop-menu">
-      <!-- Welcome Item (Always styled as pill) -->
+      <!-- Welcome Item (Always styled as pill when active) -->
       <li class="nav-item">
-        <a [routerLink]="['/']" fragment="hero" class="nav-link welcome-pill">
+        <a [routerLink]="['/']" fragment="hero" routerLinkActive="active" [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'exact', fragment: 'exact', matrixParams: 'ignored' }" class="nav-link">
           {{ langService.translate('nav.welcome') }}
         </a>
       </li>
 
       @for (item of navItems(); track item.label) {
         <li class="nav-item">
-          <a [routerLink]="[item.path]" [fragment]="item.fragment" routerLinkActive="active" class="nav-link" [ngStyle]="item.styles">
+          <a [routerLink]="[item.path]" [fragment]="item.fragment" routerLinkActive="active" [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'exact', fragment: 'exact', matrixParams: 'ignored' }" class="nav-link" [ngStyle]="item.styles">
             {{ item.label }}
           </a>
         </li>
@@ -69,13 +69,13 @@
 
     <ul class="mobile-nav-menu">
       <li class="nav-item">
-        <a [routerLink]="['/']" fragment="hero" class="nav-link welcome-pill" (click)="toggleMenu()">
+        <a [routerLink]="['/']" fragment="hero" routerLinkActive="active" [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'exact', fragment: 'exact', matrixParams: 'ignored' }" class="nav-link" (click)="toggleMenu()">
           {{ langService.translate('nav.welcome') }}
         </a>
       </li>
       @for (item of navItems(); track item.label) {
         <li class="nav-item">
-          <a [routerLink]="[item.path]" [fragment]="item.fragment" routerLinkActive="active" class="nav-link" (click)="toggleMenu()">
+          <a [routerLink]="[item.path]" [fragment]="item.fragment" routerLinkActive="active" [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'exact', fragment: 'exact', matrixParams: 'ignored' }" class="nav-link" (click)="toggleMenu()">
             {{ item.label }}
           </a>
         </li>
