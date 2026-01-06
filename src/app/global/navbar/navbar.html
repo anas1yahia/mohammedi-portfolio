@@ -1,0 +1,39 @@
+<nav class="navbar" dir="rtl">
+  <div class="navbar-container">
+    <!-- Logo (Right) -->
+    <div class="logo">
+      <a routerLink="/">
+        <img src="logo-color.png" alt="Logo">
+      </a>
+    </div>
+
+    <!-- Navigation Menu (Center) -->
+    <ul class="nav-menu">
+      <!-- Welcome Item (Always styled as pill) -->
+      <li class="nav-item">
+        <a routerLink="/welcome" class="nav-link welcome-pill">
+          مرحبا
+        </a>
+      </li>
+
+      @for (item of navItems(); track item.label) {
+        <li class="nav-item">
+          <a [routerLink]="item.path" routerLinkActive="active" class="nav-link" [ngStyle]="item.styles">
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- CTA Button (Left) -->
+    <a routerLink="/start-project" class="cta-button">
+      <!-- Decor Left (Visual Left, Physical Left) -->
+      <div class="deco-icon deco-left"></div>
+      
+      <span class="cta-text">قدم مشروعك</span>
+      
+      <!-- Decor Right (Visual Right, Physical Right of the container?) -->
+      <div class="deco-icon deco-right"></div>
+    </a>
+  </div>
+</nav>

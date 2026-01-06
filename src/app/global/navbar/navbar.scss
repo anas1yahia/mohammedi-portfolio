@@ -1,0 +1,132 @@
+:host {
+  display: block;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: 7px;
+}
+
+.navbar {
+  width: 100%;
+  direction: rtl;
+  font-family: 'Noto Sans Arabic', sans-serif;
+
+  .navbar-container {
+    max-width: 1264px;
+    margin: 0 auto;
+    padding: 9px 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+  }
+
+  .logo {
+    img {
+      height: 45px;
+      width: auto;
+      display: block;
+    }
+  }
+
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 54px;
+    margin: 0;
+    padding: 0;
+
+    .nav-item {
+      .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #717070;
+        font-size: 13px;
+        font-weight: 500;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+        height: 27px;
+        padding: 0 14px;
+        box-sizing: border-box;
+
+        &:hover {
+          color: #4fabe9 !important;
+        }
+
+        &.active, &.welcome-pill {
+          color: #4fabe9 !important;
+          font-weight: 600;
+          background-color: white;
+          
+          border-left: 2px solid #4fabe9;
+          border-right: 2px solid #4fabe9;
+          border-top: 0;
+          border-bottom: 0;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+
+  .cta-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4fabe9;
+    color: white;
+    text-decoration: none;
+    width: 137px;
+    height: 30px; // Updated height
+    border-radius: 34px;
+    transition: background-color 0.2s;
+    overflow: visible; // Show decorative elements
+
+    &:hover {
+      background-color: darken(#4fabe9, 5%);
+    }
+
+    .cta-text {
+      font-size: 11px; // Adjusted for small button
+      font-weight: 700;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    .deco-icon {
+      position: absolute;
+      width: 29px;
+      height: 27px;
+      border-right: 2px solid #4fabe9;
+      border-top: 2px solid #4fabe9;
+      border-top-right-radius: 17px;
+      pointer-events: none;
+      box-sizing: border-box;
+    }
+
+    .deco-left {
+       left: -5px;
+       top: 8px;
+       transform: rotate(178.3deg);
+    }
+
+    .deco-right {
+       left: 112px;
+       top: -5px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .navbar-container {
+      padding: 10px 20px;
+    }
+    
+    .nav-menu {
+      display: none; 
+    }
+  }
+}

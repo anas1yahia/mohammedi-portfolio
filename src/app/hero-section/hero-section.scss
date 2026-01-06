@@ -1,0 +1,279 @@
+:host {
+  display: block;
+  background-color: #ffffff;
+  padding: 50px 0;
+  font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  direction: rtl;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* --- 1. Welcome Column --- */
+  .welcome-col {
+    width: 367px;
+    align-items: flex-start;
+    gap: 27px;
+
+    .welcome-header {
+      width: 100%;
+      position: relative;
+      
+      .text-content {
+        text-align: right;
+        margin-bottom: 20px;
+        
+        .welcome-title {
+          font-size: 41px;
+          font-weight: 600;
+          color: #262526;
+          margin: 0;
+          line-height: 1.2;
+        }
+        .welcome-subtitle {
+          font-size: 41px;
+          font-weight: 600;
+          color: #262526;
+          margin: 0;
+          line-height: 1.2;
+        }
+      }
+
+      .role-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #4fabe9;
+        color: white;
+        padding: 8px 24px;
+        border-radius: 31px;
+        
+        .role-text {
+          font-weight: 700;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .contact-stats-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+
+      .contact-actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .action-row {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: row-reverse; // Force LTR visual order (Left -> Right) for alignment matching Figma X coords
+          
+          .main-btn {
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .btn-text {
+              color: white;
+              font-weight: 700;
+              font-size: 16px;
+            }
+          }
+
+          .icon-part {
+            width: 62px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            .icon-box {
+              width: 62px;
+              height: 64px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              
+              svg { color: white; width: 24px; height: 24px; }
+            }
+            
+            .tab-deco {
+              width: 31px;
+              height: 6px;
+            }
+          }
+          
+          &.need-design {
+             // [Button (Left)] [Icon (Right)]
+             justify-content: flex-start; // Align to Left? No, frame x=31 inside 286?
+             // Let's assume standard flow.
+             
+             .main-btn {
+               width: 224px;
+               background-color: #5435f7;
+             }
+             .icon-part {
+               .icon-box { background-color: #5435f7; }
+               .tab-deco { background-color: #5435f7; }
+             }
+          }
+
+          &.contact-me {
+             // [Icon (Left)] [Button (Right)]
+             // HTML: [Icon] [Button]. row-reverse -> [Icon] Left, [Button] Right.
+             // Just need to ensure alignment.
+             
+             .main-btn {
+               width: 181px;
+               background-color: #4fabe9;
+             }
+             .icon-part {
+               .icon-box { background-color: #4fabe9; }
+               .tab-deco { background-color: #4fabe9; }
+             }
+          }
+        }
+      }
+
+      .stats-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        .stat-item {
+          text-align: center;
+          
+          .stat-num {
+            display: block;
+            font-size: 38px;
+            font-weight: 700;
+            color: #242324;
+          }
+          .stat-label {
+            display: block;
+            font-size: 11px;
+            color: #8a8a8a;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .services-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      align-items: flex-end;
+
+      .service-row {
+        display: flex;
+        gap: 10px;
+      }
+
+      .service-pill {
+        border-radius: 32px;
+        padding: 7px 15px;
+        color: white;
+        font-size: 10px;
+        font-weight: 800;
+        white-space: nowrap;
+        text-align: center;
+
+        &.purple-pill { background-color: #8a43e1; }
+        &.blue-pill { background-color: #4fabe9; }
+        &.green-pill { background-color: #5dc983; }
+        &.orange-pill { background-color: #ef7b16; }
+      }
+    }
+  }
+
+  /* --- 2. Image Column --- */
+  .image-col {
+    width: 362px;
+    align-items: center;
+    gap: 66px;
+
+    .main-img-wrapper {
+      width: 100%;
+      height: 369px;
+      img { width: 100%; height: 100%; object-fit: contain; }
+    }
+    
+    .sub-img-wrapper {
+      width: 95px;
+      height: 53px;
+      img { width: 100%; height: 100%; object-fit: contain; }
+    }
+  }
+
+  /* --- 3. Profile Column --- */
+  .profile-col {
+    width: 334px;
+    gap: 27px;
+
+    .profile-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      align-items: flex-end;
+
+      .deco-icons-container {
+        height: 141px;
+        width: 311px;
+        position: relative;
+        direction: ltr; 
+        margin-right: 23px;
+
+        .deco { position: absolute; }
+        .d1 { left: 0; top: 114px; width: 28px; height: 27px; }
+        .d2 { left: 287px; top: 25px; width: 24px; height: 24px; }
+        .d3 { left: 52px; top: 37px; width: 23px; height: 24px; }
+        .d4 { left: 201px; top: 0; width: 23px; height: 24px; }
+        .d5 { left: 119px; top: 4px; width: 25px; height: 24px; }
+      }
+
+      .profile-desc {
+        text-align: right;
+        font-size: 19px;
+        color: #484848;
+        line-height: 1.5;
+        p { margin: 0; }
+        .highlight { color: #4fabe9; font-weight: 700; }
+      }
+    }
+
+    .portfolio-preview {
+      width: 323px;
+      height: 131px;
+      background-color: #d1d5dc;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    .column { width: 100% !important; align-items: center !important; }
+    .welcome-col .welcome-header .text-content { text-align: center; }
+    .profile-col .profile-desc { text-align: center; }
+  }
+}
