@@ -68,9 +68,15 @@ export class LanguageService {
       projects: {
         title: 'أعمالي ومشاركاتي',
         cat: 'تصميم غلاف',
+        loading: 'جاري تحميل المشاريع...',
         placeholderTitle: 'تفاصيل المشروع',
         placeholderDesc: 'هذا نص تجريبي لوصف المشروع المختار. هنا سيتم عرض شرح مفصل عن خطوات العمل، الأهداف المحققة، والأدوات المستخدمة في تنفيذ هذا التصميم الإبداعي.',
-        close: 'إغلاق'
+        close: 'إغلاق',
+      viewOnBehance: 'عرض المشروع الكامل على Behance',
+      description: 'الوصف',
+      details: 'التفاصيل',
+      category: 'الفئة',
+      year: 'السنة'
       },
       services: {
         title: 'خدماتي الإبداعية',
@@ -136,9 +142,15 @@ export class LanguageService {
       projects: {
         title: 'My Works & Participations',
         cat: 'Cover Design',
+        loading: 'Loading projects...',
         placeholderTitle: 'Project Details',
         placeholderDesc: 'This is a placeholder description for the selected project. Here you will see a detailed explanation of the workflow, achieved goals, and tools used in executing this creative design.',
-        close: 'Close'
+        close: 'Close',
+      viewOnBehance: 'View Full Project on Behance',
+      description: 'Description',
+      details: 'Details',
+      category: 'Category',
+      year: 'Year'
       },
       services: {
         title: 'My Creative Services',

@@ -1,6 +1,7 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../services/language.service';
+import { BehanceService, BehanceProject } from '../services/behance.service';
 
 @Component({
   selector: 'app-my-projects',
@@ -9,17 +10,11 @@ import { LanguageService } from '../services/language.service';
   templateUrl: './my-projects.html',
   styleUrl: './my-projects.scss'
 })
-export class MyProjectsComponent {
+export class MyProjectsComponent implements OnInit {
   langService = inject(LanguageService);
-  isDetailsOpen = signal(false);
-  selectedProject = signal<any>(null);
+  behanceService = inject(BehanceService);
 
-  openDetails(project: any) {
-    this.selectedProject.set(project);
-    this.isDetailsOpen.set(true);
-  }
-
-  closeDetails() {
-    this.isDetailsOpen.set(false);
+  ngOnInit() {
+    this.behanceService.fetchProjects();
   }
 }
