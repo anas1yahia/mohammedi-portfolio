@@ -34,14 +34,14 @@
         margin-bottom: 20px;
 
         .welcome-title {
-          font-size: clamp(28px, 8vw, 41px);
+          font-size: 41px;
           font-weight: 600;
           color: var(--text-main);
           margin: 0;
           line-height: 1.2;
         }
         .welcome-subtitle {
-          font-size: clamp(28px, 8vw, 41px);
+          font-size: 41px;
           font-weight: 600;
           color: var(--text-main);
           margin: 0;
@@ -236,8 +236,7 @@
 
       .deco-icons-container {
         height: 141px;
-        width: 100%;
-        max-width: 311px;
+        width: 311px;
         position: relative;
         direction: ltr;
         margin-right: 23px;
@@ -279,13 +278,6 @@
       border-radius: 20px;
       border: 1px solid var(--border-color);
       box-shadow: 0 10px 30px var(--shadow-color);
-
-      @media (max-width: 400px) {
-        padding: 20px 10px;
-        .pencil-body {
-          width: 140px !important;
-        }
-      }
 
       .pencil {
         display: flex;

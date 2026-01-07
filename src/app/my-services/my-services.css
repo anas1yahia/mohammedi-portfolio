@@ -79,7 +79,7 @@
   background-size: 16px 16px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 10px 10px 0 0 var(--shadow-color);
+  box-shadow: 10px 10px 0px 0px var(--shadow-color);
   height: 200px;
   border: 2px solid var(--text-main);
 }
@@ -166,7 +166,7 @@
 }
 @media (max-width: 1024px) {
   .services-section {
-    padding: 60px 20px;
+    padding: 60px 0;
   }
   .services-section .container {
     flex-direction: column;
@@ -192,10 +192,6 @@
   }
 }
 @media (max-width: 768px) {
-  .services-section {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .services-section .header-column .main-title {
     font-size: 36px;
   }

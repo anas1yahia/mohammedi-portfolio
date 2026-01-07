@@ -176,18 +176,6 @@
       display: block;
     }
   }
-
-  @media (max-width: 400px) {
-    .navbar-container {
-      padding: 8px 12px;
-    }
-    .logo img {
-      height: 35px;
-    }
-    .left-actions {
-      gap: 8px;
-    }
-  }
 }
 
 // Bottom Sheet Styles
