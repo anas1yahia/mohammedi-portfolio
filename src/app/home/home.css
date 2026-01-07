@@ -16,6 +16,16 @@ app-testimonials-section {
   scroll-margin-top: 70px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.02);
 }
+@media (max-width: 768px) {
+  app-hero-section,
+  app-my-projects,
+  app-my-services,
+  app-work-steps,
+  app-testimonials-section {
+    min-height: auto;
+    padding: 60px 0;
+  }
+}
 
 :host-context(html) {
   scroll-snap-type: y proximity;

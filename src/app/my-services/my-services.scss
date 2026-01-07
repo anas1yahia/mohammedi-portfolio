@@ -63,7 +63,7 @@
         opacity: 0.05;
         position: absolute;
         top: -40px;
-        inset-inline-end: 20px;
+        inset-inline-end: 0; // Avoid negative bleed
         z-index: 0;
         line-height: 1;
       }
@@ -179,7 +179,7 @@
   }
 
   @media (max-width: 1024px) {
-    padding: 60px 0;
+    padding: 60px 20px;
 
     .container {
       flex-direction: column;
@@ -187,10 +187,14 @@
     }
 
     .header-column {
-      position: static;
+      position: sticky; // Keep sticky on mobile
+      top: 80px;
+      z-index: 100;
+      background-color: var(--bg-color);
       width: 100%;
       text-align: center;
       margin-bottom: 40px;
+      padding: 10px 0;
 
       .main-title {
         text-align: center;

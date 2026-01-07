@@ -22,7 +22,8 @@
   /* --- 1. Welcome Column --- */
 }
 .hero-section .welcome-col {
-  width: 367px;
+  width: 100%;
+  max-width: 367px;
   align-items: flex-start;
   gap: 27px;
 }
@@ -192,7 +193,8 @@
   /* --- 2. Image Column --- */
 }
 .hero-section .image-col {
-  width: 362px;
+  width: 100%;
+  max-width: 362px;
   align-items: center;
   gap: 66px;
 }
@@ -222,7 +224,8 @@
   /* --- 3. Profile Column --- */
 }
 .hero-section .profile-col {
-  width: 334px;
+  width: 100%;
+  max-width: 334px;
   gap: 27px;
 }
 .hero-section .profile-col .profile-details {
@@ -234,7 +237,8 @@
 }
 .hero-section .profile-col .profile-details .deco-icons-container {
   height: 141px;
-  width: 311px;
+  width: 100%;
+  max-width: 311px;
   position: relative;
   direction: ltr;
   margin-right: 23px;

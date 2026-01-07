@@ -21,7 +21,8 @@
 
   /* --- 1. Welcome Column --- */
   .welcome-col {
-    width: 367px;
+    width: 100%;
+    max-width: 367px;
     align-items: flex-start;
     gap: 27px;
 
@@ -199,7 +200,8 @@
 
   /* --- 2. Image Column --- */
   .image-col {
-    width: 362px;
+    width: 100%;
+    max-width: 362px;
     align-items: center;
     gap: 66px;
 
@@ -224,7 +226,8 @@
 
   /* --- 3. Profile Column --- */
   .profile-col {
-    width: 334px;
+    width: 100%;
+    max-width: 334px;
     gap: 27px;
 
     .profile-details {
@@ -236,7 +239,8 @@
 
       .deco-icons-container {
         height: 141px;
-        width: 311px;
+        width: 100%;
+        max-width: 311px;
         position: relative;
         direction: ltr;
         margin-right: 23px;

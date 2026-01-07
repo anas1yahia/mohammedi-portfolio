@@ -36,8 +36,15 @@
   --navbar-bg: rgba(38, 37, 51, 0.6);
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: clip; // Modern way to prevent horizontal scroll without breaking sticky
+  position: relative;
+}
+
+body {
   font-family: "Playpen Sans Arabic", cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
