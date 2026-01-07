@@ -27,6 +27,11 @@
     border-top-right-radius: 0;
   }
 
+  @media (max-width: 480px) {
+    gap: 16px;
+    padding: 10px 15px;
+  }
+
   .icon-link {
     display: block;
     width: 24px;

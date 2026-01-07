@@ -151,6 +151,17 @@
     display: block;
   }
 }
+@media (max-width: 400px) {
+  .navbar .navbar-container {
+    padding: 8px 12px;
+  }
+  .navbar .logo img {
+    height: 35px;
+  }
+  .navbar .left-actions {
+    gap: 8px;
+  }
+}
 
 .bottom-sheet-overlay {
   position: fixed;

@@ -22,14 +22,14 @@
     flex: 0 0 400px;
     position: sticky;
     top: 150px;
-    
+
     .main-title {
       font-size: 70px;
       font-weight: 900;
       color: var(--text-main);
       line-height: 1.1;
       text-align: start;
-      
+
       .square-dot {
         display: inline-block;
         width: 18px;
@@ -45,12 +45,12 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
-    
+
     .service-item {
       position: relative;
       width: 100%;
       max-width: 700px;
-      
+
       // Staggered layout like projects
       &:nth-child(even) { align-self: flex-end; }
       &:nth-child(odd) { align-self: flex-start; }
@@ -80,7 +80,7 @@
         background-size: 16px 16px;
         border-radius: 16px;
         overflow: hidden;
-        box-shadow: 10px 10px 0px 0px var(--shadow-color);
+        box-shadow: 10px 10px 0 0 var(--shadow-color);
         height: 200px;
         border: 2px solid var(--text-main);
 
@@ -179,7 +179,7 @@
   }
 
   @media (max-width: 1024px) {
-    padding: 60px 0;
+    padding: 60px 20px;
 
     .container {
       flex-direction: column;
@@ -210,6 +210,8 @@
   }
 
   @media (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
     .header-column .main-title { font-size: 36px; }
 
     .services-list {

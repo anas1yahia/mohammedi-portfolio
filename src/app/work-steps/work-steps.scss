@@ -32,7 +32,8 @@
     .ticket-card {
       position: relative;
       display: flex;
-      width: 320px;
+      width: 100%;
+      max-width: 320px;
       height: 180px;
       background-color: var(--card-color, #a3f05d);
       border-radius: 12px;
@@ -122,6 +123,10 @@
       text-align: center;
       position: relative;
       background-color: var(--card-bg);
+
+      @media (max-width: 768px) {
+        padding: 20px;
+      }
 
       // Corner dots
       &::before, &::after {

@@ -73,7 +73,7 @@
   opacity: 0.15;
   position: absolute;
   top: -80px;
-  inset-inline-end: -20px;
+  inset-inline-end: 0;
   z-index: 0;
   line-height: 1;
 }
@@ -265,7 +265,7 @@
 }
 @media (max-width: 1024px) {
   .projects-section {
-    padding: 60px 0;
+    padding: 60px 20px;
   }
   .projects-section .container {
     flex-direction: column;
@@ -305,9 +305,8 @@
 @media (max-width: 768px) {
   .projects-section {
     padding: 40px 0;
-  }
-  .projects-section .projects-section {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .projects-section .header-column .main-title {
     font-size: 36px;

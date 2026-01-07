@@ -24,6 +24,12 @@
   border-top-left-radius: 24px;
   border-top-right-radius: 0;
 }
+@media (max-width: 480px) {
+  .social-bar {
+    gap: 16px;
+    padding: 10px 15px;
+  }
+}
 .social-bar .icon-link {
   display: block;
   width: 24px;

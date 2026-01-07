@@ -8,6 +8,13 @@
   background-color: var(--card-bg);
   border-radius: 24px;
   padding: 32px;
+}
+@media (max-width: 480px) {
+  .card-container {
+    padding: 24px 20px;
+  }
+}
+.card-container {
   position: relative;
   display: flex;
   flex-direction: column;

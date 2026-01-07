@@ -32,8 +32,14 @@
   --navbar-bg: rgba(38, 37, 51, 0.6);
 }
 
-body {
+html, body {
+  overflow-x: hidden;
+  width: 100%;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: "Playpen Sans Arabic", cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -42,6 +48,12 @@ body {
 
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
