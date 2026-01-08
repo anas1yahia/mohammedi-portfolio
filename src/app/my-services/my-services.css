@@ -81,7 +81,6 @@
   overflow: hidden;
   box-shadow: 10px 10px 0px 0px var(--shadow-color);
   height: 200px;
-  border: 2px solid var(--text-main);
 }
 .services-section .services-list .service-item .service-ticket .ticket-stub {
   width: 100px;
