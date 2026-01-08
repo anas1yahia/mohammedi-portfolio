@@ -79,7 +79,7 @@
   background-size: 16px 16px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 10px 10px 0px 0px var(--shadow-color);
+  box-shadow: 10px 10px 0 0 var(--shadow-color);
   height: 200px;
 }
 .services-section .services-list .service-item .service-ticket .ticket-stub {
