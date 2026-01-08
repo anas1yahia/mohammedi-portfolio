@@ -24,7 +24,7 @@
       }
 
       @for (project of behanceService.projects(); track project.id; let idx = $index) {
-        <div 
+        <div
           class="project-item"
           [class.item-01]="idx % 3 === 0"
           [class.item-02]="idx % 3 === 1"
@@ -32,7 +32,7 @@
           <a [href]="project.url" target="_blank" rel="noopener" class="project-link">
             <span class="number">{{ (idx + 1).toString().padStart(2, '0') }}</span>
 
-            <div class="project-card">\n              <div class="image-area">
+            <div class="project-card">             <div class="image-area">
                 <img [src]="project.thumbnail" [alt]="project.name" loading="lazy">
               </div>
 
